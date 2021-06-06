@@ -1,0 +1,461 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Capston2Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="1Jounal$">
+    <Key>
+      <PropertyRef Name="JOURNAL_ORDER" />
+    </Key>
+    <Property Name="JOURNAL_ORDER" Type="float" Nullable="false" />
+    <Property Name="JournalTransactionID" Type="float" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="Time" Type="datetime" />
+    <Property Name="Account" Type="nvarchar" MaxLength="255" />
+    <Property Name="Ref" Type="float" />
+    <Property Name="Debit" Type="float" />
+    <Property Name="Credit" Type="float" />
+    <Property Name="F9" Type="nvarchar" MaxLength="255" />
+    <Property Name="F10" Type="nvarchar" MaxLength="255" />
+    <Property Name="F11" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="2Ledeger(AR)$">
+    <Key>
+      <PropertyRef Name="ACC_RE_ORDER" />
+    </Key>
+    <Property Name="ACC_RE_ORDER" Type="float" Nullable="false" />
+    <Property Name="DATE" Type="datetime" />
+    <Property Name="DESCRIPTION" Type="nvarchar" MaxLength="255" />
+    <Property Name="DEBIT" Type="float" />
+    <Property Name="CREDIT" Type="float" />
+    <Property Name="BALANCE" Type="float" />
+  </EntityType>
+  <EntityType Name="2Ledger(AP)$">
+    <Key>
+      <PropertyRef Name="ACC_PAY_ORDER" />
+    </Key>
+    <Property Name="ACC_PAY_ORDER" Type="float" Nullable="false" />
+    <Property Name="DATE" Type="datetime" />
+    <Property Name="DESCRIPTION" Type="nvarchar" MaxLength="255" />
+    <Property Name="DEBIT" Type="float" />
+    <Property Name="CREDIT" Type="float" />
+    <Property Name="BALANCE" Type="float" />
+    <Property Name="F7" Type="nvarchar" MaxLength="255" />
+    <Property Name="F8" Type="nvarchar" MaxLength="255" />
+    <Property Name="F9" Type="nvarchar" MaxLength="255" />
+    <Property Name="F10" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="2Ledger(Cash)$">
+    <Key>
+      <PropertyRef Name="CASH_ORDER" />
+    </Key>
+    <Property Name="CASH_ORDER" Type="float" Nullable="false" />
+    <Property Name="DATE" Type="datetime" />
+    <Property Name="DESCRIPTION" Type="nvarchar" MaxLength="255" />
+    <Property Name="DEBIT" Type="float" />
+    <Property Name="CREDIT" Type="float" />
+    <Property Name="BALANCE" Type="float" />
+  </EntityType>
+  <EntityType Name="2Ledger(StockDeisel)$">
+    <Key>
+      <PropertyRef Name="SD_ORDER" />
+    </Key>
+    <Property Name="SD_ORDER" Type="float" Nullable="false" />
+    <Property Name="DATE" Type="datetime" />
+    <Property Name="DESCRIPTION" Type="nvarchar" MaxLength="255" />
+    <Property Name="DEBIT" Type="float" />
+    <Property Name="CREDIT" Type="float" />
+    <Property Name="BALANCE" Type="float" />
+    <Property Name="F7" Type="nvarchar" MaxLength="255" />
+    <Property Name="F8" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="2Ledger(StockGasohol95)$">
+    <Key>
+      <PropertyRef Name="SG_ORDER" />
+    </Key>
+    <Property Name="SG_ORDER" Type="float" Nullable="false" />
+    <Property Name="DATE" Type="datetime" />
+    <Property Name="DESCRIPTION" Type="nvarchar" MaxLength="255" />
+    <Property Name="DEBIT" Type="float" />
+    <Property Name="CREDIT" Type="float" />
+    <Property Name="BALANCE" Type="float" />
+    <Property Name="F7" Type="nvarchar" MaxLength="255" />
+    <Property Name="F8" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="3Recon$">
+    <Key>
+      <PropertyRef Name="RECON_ORDER" />
+    </Key>
+    <Property Name="RECON_ORDER" Type="float" Nullable="false" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="PO" Type="float" />
+    <Property Name="Payment" Type="float" />
+    <Property Name="Invoice" Type="float" />
+    <Property Name="Shipment" Type="float" />
+    <Property Name="Truck" Type="nvarchar" MaxLength="255" />
+    <Property Name="PetrolType" Type="nvarchar" MaxLength="255" />
+    <Property Name="Qty" Type="float" />
+    <Property Name="Amount" Type="float" />
+    <Property Name="Agent" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="'3Recon$'">
+    <Key>
+      <PropertyRef Name="RECON_ORDER" />
+    </Key>
+    <Property Name="RECON_ORDER" Type="float" Nullable="false" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="PO#" Type="float" />
+    <Property Name="Payment#" Type="float" />
+    <Property Name="Invoice#" Type="float" />
+    <Property Name="Shipment#" Type="float" />
+    <Property Name="Truck#" Type="nvarchar" MaxLength="255" />
+    <Property Name="PetrolType" Type="nvarchar" MaxLength="255" />
+    <Property Name="Q'ty" Type="float" />
+    <Property Name="Amount" Type="float" />
+    <Property Name="Agent" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="4Income$">
+    <Key>
+      <PropertyRef Name="INCOME_ORDER" />
+    </Key>
+    <Property Name="INCOME_ORDER" Type="float" Nullable="false" />
+    <Property Name="DATE" Type="datetime" />
+    <Property Name="Sale_GAS95" Type="float" />
+    <Property Name="Sale_Diesel" Type="float" />
+    <Property Name="Total_Sale" Type="float" />
+    <Property Name="COGS_GAS95" Type="float" />
+    <Property Name="COGS_Diesel" Type="float" />
+    <Property Name="Total_COGS" Type="float" />
+    <Property Name="Gross_Profit" Type="float" />
+    <Property Name="Officer_Salary" Type="float" />
+    <Property Name="GateC_Salary" Type="float" />
+    <Property Name="Total_salary" Type="float" />
+    <Property Name="Utility Expense" Type="float" />
+    <Property Name="Depreciation" Type="float" />
+    <Property Name="Net Income " Type="float" />
+  </EntityType>
+  <EntityType Name="'4Income$'">
+    <Key>
+      <PropertyRef Name="INCOME_ORDER" />
+    </Key>
+    <Property Name="INCOME_ORDER" Type="float" Nullable="false" />
+    <Property Name="DATE" Type="datetime" />
+    <Property Name="Sale_GAS95" Type="float" />
+    <Property Name="Sale_Diesel" Type="float" />
+    <Property Name="Total_Sale" Type="float" />
+    <Property Name="COGS_GAS95" Type="float" />
+    <Property Name="COGS_Diesel" Type="float" />
+    <Property Name="Total_COGS" Type="float" />
+    <Property Name="Gross_Profit" Type="float" />
+    <Property Name="Officer_Salary" Type="float" />
+    <Property Name="GateC_Salary" Type="float" />
+    <Property Name="Total_salary" Type="float" />
+    <Property Name="Utility Expense" Type="float" />
+    <Property Name="Depreciation" Type="float" />
+    <Property Name="Net Income " Type="float" />
+  </EntityType>
+  <EntityType Name="5Inventory$">
+    <Key>
+      <PropertyRef Name="Inventory_ORDER" />
+    </Key>
+    <Property Name="Inventory_ORDER" Type="float" Nullable="false" />
+    <Property Name="Stock" Type="nvarchar" MaxLength="255" />
+    <Property Name="GASOHOL95" Type="float" />
+    <Property Name="DIESEL" Type="float" />
+  </EntityType>
+  <EntityType Name="'5Inventory$'">
+    <Key>
+      <PropertyRef Name="Inventory_ORDER" />
+    </Key>
+    <Property Name="Inventory_ORDER" Type="float" Nullable="false" />
+    <Property Name="Stock" Type="nvarchar" MaxLength="255" />
+    <Property Name="GASOHOL95" Type="float" />
+    <Property Name="DIESEL" Type="float" />
+  </EntityType>
+  <EntityType Name="6PO$">
+    <Key>
+      <PropertyRef Name="PO_ORDER" />
+    </Key>
+    <Property Name="PO_ORDER" Type="float" Nullable="false" />
+    <Property Name="PO_NO" Type="float" />
+    <Property Name="PAYMENT_NO" Type="float" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="CUSTOMER_ID" Type="float" />
+    <Property Name="CUSTOMER" Type="nvarchar" MaxLength="255" />
+    <Property Name="TAX_PAYER_ID" Type="float" />
+    <Property Name="Truck" Type="nvarchar" MaxLength="255" />
+    <Property Name="ITEM" Type="nvarchar" MaxLength="255" />
+    <Property Name="Price" Type="float" />
+    <Property Name="Qty" Type="float" />
+    <Property Name="Amount" Type="float" />
+  </EntityType>
+  <EntityType Name="'6PO$'">
+    <Key>
+      <PropertyRef Name="PO_ORDER" />
+    </Key>
+    <Property Name="PO_ORDER" Type="float" Nullable="false" />
+    <Property Name="PO_NO" Type="float" />
+    <Property Name="PAYMENT_NO" Type="float" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="CUSTOMER_ID" Type="float" />
+    <Property Name="CUSTOMER" Type="nvarchar" MaxLength="255" />
+    <Property Name="TAX_PAYER_ID" Type="float" />
+    <Property Name="Truck" Type="nvarchar" MaxLength="255" />
+    <Property Name="ITEM" Type="nvarchar" MaxLength="255" />
+    <Property Name="Price/Litre" Type="float" />
+    <Property Name="Q'ty(Litre)" Type="float" />
+    <Property Name="Amount" Type="float" />
+  </EntityType>
+  <EntityType Name="7invoice$">
+    <Key>
+      <PropertyRef Name="INVOICE_ORDER" />
+    </Key>
+    <Property Name="INVOICE_ORDER" Type="float" Nullable="false" />
+    <Property Name="COMPANY_NAME" Type="nvarchar" MaxLength="255" />
+    <Property Name="ADDRESS" Type="nvarchar" MaxLength="255" />
+    <Property Name="MAIL" Type="nvarchar" MaxLength="255" />
+    <Property Name="TEL" Type="nvarchar" MaxLength="255" />
+    <Property Name="INVOICE_NO" Type="float" />
+    <Property Name="PO_NO" Type="float" />
+    <Property Name="PAYMENT_NO" Type="float" />
+    <Property Name="DATE" Type="datetime" />
+    <Property Name="CUSTOMER_ID" Type="float" />
+    <Property Name="CUSTOMER" Type="nvarchar" MaxLength="255" />
+    <Property Name="TAX_PAYER_ID" Type="float" />
+    <Property Name="DATE1" Type="datetime" />
+    <Property Name="FILL_TIME_MIN" Type="float" />
+    <Property Name="ITEM" Type="nvarchar" MaxLength="255" />
+    <Property Name="Price" Type="float" />
+    <Property Name="Qty" Type="float" />
+    <Property Name="Amount" Type="float" />
+    <Property Name="val" Type="float" />
+    <Property Name="GRAND_TOTAL" Type="float" />
+  </EntityType>
+  <EntityType Name="'7invoice$'">
+    <Key>
+      <PropertyRef Name="INVOICE_ORDER " />
+    </Key>
+    <Property Name="INVOICE_ORDER " Type="float" Nullable="false" />
+    <Property Name="COMPANY_NAME" Type="nvarchar" MaxLength="255" />
+    <Property Name="ADDRESS" Type="nvarchar" MaxLength="255" />
+    <Property Name="MAIL" Type="nvarchar" MaxLength="255" />
+    <Property Name="TEL" Type="nvarchar" MaxLength="255" />
+    <Property Name="INVOICE_NO" Type="float" />
+    <Property Name="PO_NO" Type="float" />
+    <Property Name="PAYMENT_NO" Type="float" />
+    <Property Name="DATE" Type="datetime" />
+    <Property Name="CUSTOMER_ID" Type="float" />
+    <Property Name="CUSTOMER" Type="nvarchar" MaxLength="255" />
+    <Property Name="TAX_PAYER_ID" Type="float" />
+    <Property Name="DATE1" Type="datetime" />
+    <Property Name="FILL_TIME_MIN" Type="float" />
+    <Property Name="ITEM" Type="nvarchar" MaxLength="255" />
+    <Property Name="Price/Litre" Type="float" />
+    <Property Name="Q'ty(Litre)" Type="float" />
+    <Property Name="Amount" Type="float" />
+    <Property Name="val7%" Type="float" />
+    <Property Name="GRAND_TOTAL" Type="float" />
+  </EntityType>
+  <EntityType Name="'BAY STATION$'">
+    <Key>
+      <PropertyRef Name="Bay_ID" />
+    </Key>
+    <Property Name="Bay_ID" Type="float" Nullable="false" />
+    <Property Name="Gas_ID" Type="float" />
+    <Property Name="BayName" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="CUSTOMER$">
+    <Key>
+      <PropertyRef Name="CustomerID" />
+    </Key>
+    <Property Name="CustomerID" Type="float" Nullable="false" />
+    <Property Name="Company Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Firstname_Lastname" Type="nvarchar" MaxLength="255" />
+    <Property Name="Email" Type="nvarchar" MaxLength="255" />
+    <Property Name="Address" Type="float" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="GAS$">
+    <Key>
+      <PropertyRef Name="GasID" />
+    </Key>
+    <Property Name="GasID" Type="float" Nullable="false" />
+    <Property Name="GasName" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="GASNEW$">
+    <Key>
+      <PropertyRef Name="GasID" />
+    </Key>
+    <Property Name="GasID" Type="float" Nullable="false" />
+    <Property Name="GasName" Type="nvarchar" MaxLength="255" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="DIESEL Cost" Type="float" />
+    <Property Name="DIESEL Price" Type="float" />
+    <Property Name="GASOHOL95 Cost" Type="float" />
+    <Property Name="GASOHOL95 Price" Type="float" />
+    <Property Name="F8" Type="nvarchar" MaxLength="255" />
+    <Property Name="F9" Type="nvarchar" MaxLength="255" />
+    <Property Name="F10" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Gen_Journal$">
+    <Key>
+      <PropertyRef Name="JOURNAL_ORDER" />
+    </Key>
+    <Property Name="JOURNAL_ORDER" Type="float" Nullable="false" />
+    <Property Name="JournalTransactionID" Type="float" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="Time" Type="datetime" />
+    <Property Name="Account" Type="nvarchar" MaxLength="255" />
+    <Property Name="Ref" Type="float" />
+    <Property Name="Debit" Type="float" />
+    <Property Name="Credit" Type="float" />
+    <Property Name="F9" Type="nvarchar" MaxLength="255" />
+    <Property Name="F10" Type="nvarchar" MaxLength="255" />
+    <Property Name="F11" Type="nvarchar" MaxLength="255" />
+    <Property Name="date1" Type="nvarchar" MaxLength="255" />
+    <Property Name="Receivable" Type="float" />
+    <Property Name="COGS" Type="float" />
+  </EntityType>
+  <EntityType Name="INVOICE$">
+    <Key>
+      <PropertyRef Name="Invoice_ID" />
+    </Key>
+    <Property Name="Invoice_ID" Type="float" Nullable="false" />
+    <Property Name="PO_ID" Type="float" />
+    <Property Name="DATE" Type="datetime" />
+    <Property Name="DEL_NUM" Type="float" />
+    <Property Name="CustomerID" Type="float" />
+    <Property Name="Pay_ID (Address)" Type="float" />
+    <Property Name="Filling time" Type="float" />
+    <Property Name="F8" Type="nvarchar" MaxLength="255" />
+    <Property Name="Amount Filling Volume" Type="float" />
+    <Property Name="Price per volume" Type="float" />
+    <Property Name="F11" Type="float" />
+    <Property Name="Total Price (Baht)" Type="float" />
+    <Property Name="F13" Type="float" />
+  </EntityType>
+  <EntityType Name="'JOUNAL TRANSECTION$'">
+    <Key>
+      <PropertyRef Name="Fianance_ID" />
+    </Key>
+    <Property Name="Fianance_ID" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="DATE" Type="datetime" />
+    <Property Name="TransName" Type="nvarchar" MaxLength="255" />
+    <Property Name="TransType" Type="nvarchar" MaxLength="255" />
+    <Property Name="TransValue" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="PAYMENT$">
+    <Key>
+      <PropertyRef Name="Pay_ID (Address)" />
+    </Key>
+    <Property Name="Pay_ID (Address)" Type="float" Nullable="false" />
+    <Property Name="Card_ID" Type="float" />
+    <Property Name="CustomerID" Type="float" />
+    <Property Name="Company Name" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="PURCHEASE$">
+    <Key>
+      <PropertyRef Name="PO_ID" />
+    </Key>
+    <Property Name="PO_ID" Type="float" Nullable="false" />
+    <Property Name="SERVICE_ID" Type="float" />
+    <Property Name="GAS_ID" Type="float" />
+    <Property Name="BAY_ID" Type="float" />
+    <Property Name="TRUCK_ID" Type="float" />
+    <Property Name="DATE" Type="datetime" />
+    <Property Name="WeightID" Type="nvarchar" MaxLength="255" />
+    <Property Name="FILL_START_TIME" Type="datetime" />
+    <Property Name="FILL_END_TIME" Type="datetime" />
+    <Property Name="TIME_DIF" Type="datetime" />
+    <Property Name="FILLINGTIME" Type="float" />
+    <Property Name="Volume (*200)" Type="float" />
+    <Property Name="Status" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="'SALE OFFICE$'">
+    <Key>
+      <PropertyRef Name="Service_ID" />
+    </Key>
+    <Property Name="Service_ID" Type="float" Nullable="false" />
+    <Property Name="Finance_ID" Type="nvarchar" MaxLength="255" />
+    <Property Name="Staff_ID" Type="float" />
+    <Property Name="Queue" Type="nvarchar" MaxLength="255" />
+    <Property Name="F5" Type="nvarchar" MaxLength="255" />
+    <Property Name="F6" Type="nvarchar" MaxLength="255" />
+    <Property Name="F7" Type="nvarchar" MaxLength="255" />
+    <Property Name="F8" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="STAFF$">
+    <Key>
+      <PropertyRef Name="Staff_ID" />
+    </Key>
+    <Property Name="Staff_ID" Type="float" Nullable="false" />
+    <Property Name="Username" Type="nvarchar" MaxLength="255" />
+    <Property Name="UserPassword" Type="float" />
+    <Property Name="Firstname_Lastname" Type="nvarchar" MaxLength="255" />
+    <Property Name="Email" Type="nvarchar" MaxLength="255" />
+    <Property Name="BOD" Type="datetime" />
+    <Property Name="Address" Type="float" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="255" />
+    <Property Name="Position" Type="nvarchar" MaxLength="255" />
+    <Property Name="F10" Type="nvarchar" MaxLength="255" />
+    <Property Name="F11" Type="nvarchar" MaxLength="255" />
+    <Property Name="F12" Type="nvarchar" MaxLength="255" />
+    <Property Name="F13" Type="nvarchar" MaxLength="255" />
+    <Property Name="F14" Type="nvarchar" MaxLength="255" />
+    <Property Name="F15" Type="nvarchar" MaxLength="255" />
+    <Property Name="F16" Type="nvarchar" MaxLength="255" />
+    <Property Name="F17" Type="nvarchar" MaxLength="255" />
+    <Property Name="F18" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="TRUCK$">
+    <Key>
+      <PropertyRef Name="Truck_ID" />
+    </Key>
+    <Property Name="Truck_ID" Type="float" Nullable="false" />
+    <Property Name="Customer_ID" Type="float" />
+    <Property Name="Driver_Firstname_Lastname" Type="nvarchar" MaxLength="255" />
+    <Property Name="VEHICLE_NUMBER" Type="nvarchar" MaxLength="255" />
+    <Property Name="F5" Type="nvarchar" MaxLength="255" />
+    <Property Name="F6" Type="nvarchar" MaxLength="255" />
+    <Property Name="F7" Type="nvarchar" MaxLength="255" />
+    <Property Name="Company Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="shipping Address" Type="float" />
+  </EntityType>
+  <EntityType Name="WEIGHT$">
+    <Key>
+      <PropertyRef Name="WeightID" />
+    </Key>
+    <Property Name="WeightID" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="QUEUE" Type="nvarchar" MaxLength="255" />
+    <Property Name="TIME In" Type="datetime" />
+    <Property Name="TIME Out" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityContainer Name="Capston2ModelStoreContainer">
+    <EntitySet Name="1Jounal$" EntityType="Self.1Jounal$" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="2Ledeger(AR)$" EntityType="Self.2Ledeger(AR)$" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="2Ledger(AP)$" EntityType="Self.2Ledger(AP)$" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="2Ledger(Cash)$" EntityType="Self.2Ledger(Cash)$" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="2Ledger(StockDeisel)$" EntityType="Self.2Ledger(StockDeisel)$" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="2Ledger(StockGasohol95)$" EntityType="Self.2Ledger(StockGasohol95)$" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="3Recon$" EntityType="Self.3Recon$" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="'3Recon$'" EntityType="Self.'3Recon$'" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="4Income$" EntityType="Self.4Income$" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="'4Income$'" EntityType="Self.'4Income$'" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="5Inventory$" EntityType="Self.5Inventory$" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="'5Inventory$'" EntityType="Self.'5Inventory$'" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="6PO$" EntityType="Self.6PO$" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="'6PO$'" EntityType="Self.'6PO$'" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="7invoice$" EntityType="Self.7invoice$" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="'7invoice$'" EntityType="Self.'7invoice$'" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="'BAY STATION$'" EntityType="Self.'BAY STATION$'" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CUSTOMER$" EntityType="Self.CUSTOMER$" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GAS$" EntityType="Self.GAS$" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GASNEW$" EntityType="Self.GASNEW$" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Gen_Journal$" EntityType="Self.Gen_Journal$" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="INVOICE$" EntityType="Self.INVOICE$" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="'JOUNAL TRANSECTION$'" EntityType="Self.'JOUNAL TRANSECTION$'" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PAYMENT$" EntityType="Self.PAYMENT$" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PURCHEASE$" EntityType="Self.PURCHEASE$" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="'SALE OFFICE$'" EntityType="Self.'SALE OFFICE$'" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="STAFF$" EntityType="Self.STAFF$" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TRUCK$" EntityType="Self.TRUCK$" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WEIGHT$" EntityType="Self.WEIGHT$" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

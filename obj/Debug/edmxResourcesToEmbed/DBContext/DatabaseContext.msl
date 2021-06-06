@@ -1,0 +1,461 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Capston2ModelStoreContainer" CdmEntityContainer="Capston2Entities8">
+    <EntitySetMapping Name="C1Jounal_">
+      <EntityTypeMapping TypeName="Capston2Model.C1Jounal_">
+        <MappingFragment StoreEntitySet="1Jounal$">
+          <ScalarProperty Name="JOURNAL_ORDER" ColumnName="JOURNAL_ORDER" />
+          <ScalarProperty Name="JournalTransactionID" ColumnName="JournalTransactionID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+          <ScalarProperty Name="Ref" ColumnName="Ref" />
+          <ScalarProperty Name="Debit" ColumnName="Debit" />
+          <ScalarProperty Name="Credit" ColumnName="Credit" />
+          <ScalarProperty Name="F9" ColumnName="F9" />
+          <ScalarProperty Name="F10" ColumnName="F10" />
+          <ScalarProperty Name="F11" ColumnName="F11" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C2Ledeger_AR__">
+      <EntityTypeMapping TypeName="Capston2Model.C2Ledeger_AR__">
+        <MappingFragment StoreEntitySet="2Ledeger(AR)$">
+          <ScalarProperty Name="ACC_RE_ORDER" ColumnName="ACC_RE_ORDER" />
+          <ScalarProperty Name="DATE" ColumnName="DATE" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="DEBIT" ColumnName="DEBIT" />
+          <ScalarProperty Name="CREDIT" ColumnName="CREDIT" />
+          <ScalarProperty Name="BALANCE" ColumnName="BALANCE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C2Ledger_AP__">
+      <EntityTypeMapping TypeName="Capston2Model.C2Ledger_AP__">
+        <MappingFragment StoreEntitySet="2Ledger(AP)$">
+          <ScalarProperty Name="ACC_PAY_ORDER" ColumnName="ACC_PAY_ORDER" />
+          <ScalarProperty Name="DATE" ColumnName="DATE" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="DEBIT" ColumnName="DEBIT" />
+          <ScalarProperty Name="CREDIT" ColumnName="CREDIT" />
+          <ScalarProperty Name="BALANCE" ColumnName="BALANCE" />
+          <ScalarProperty Name="F7" ColumnName="F7" />
+          <ScalarProperty Name="F8" ColumnName="F8" />
+          <ScalarProperty Name="F9" ColumnName="F9" />
+          <ScalarProperty Name="F10" ColumnName="F10" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C2Ledger_Cash__">
+      <EntityTypeMapping TypeName="Capston2Model.C2Ledger_Cash__">
+        <MappingFragment StoreEntitySet="2Ledger(Cash)$">
+          <ScalarProperty Name="CASH_ORDER" ColumnName="CASH_ORDER" />
+          <ScalarProperty Name="DATE" ColumnName="DATE" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="DEBIT" ColumnName="DEBIT" />
+          <ScalarProperty Name="CREDIT" ColumnName="CREDIT" />
+          <ScalarProperty Name="BALANCE" ColumnName="BALANCE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C2Ledger_StockDeisel__">
+      <EntityTypeMapping TypeName="Capston2Model.C2Ledger_StockDeisel__">
+        <MappingFragment StoreEntitySet="2Ledger(StockDeisel)$">
+          <ScalarProperty Name="SD_ORDER" ColumnName="SD_ORDER" />
+          <ScalarProperty Name="DATE" ColumnName="DATE" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="DEBIT" ColumnName="DEBIT" />
+          <ScalarProperty Name="CREDIT" ColumnName="CREDIT" />
+          <ScalarProperty Name="BALANCE" ColumnName="BALANCE" />
+          <ScalarProperty Name="F7" ColumnName="F7" />
+          <ScalarProperty Name="F8" ColumnName="F8" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C2Ledger_StockGasohol95__">
+      <EntityTypeMapping TypeName="Capston2Model.C2Ledger_StockGasohol95__">
+        <MappingFragment StoreEntitySet="2Ledger(StockGasohol95)$">
+          <ScalarProperty Name="SG_ORDER" ColumnName="SG_ORDER" />
+          <ScalarProperty Name="DATE" ColumnName="DATE" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="DEBIT" ColumnName="DEBIT" />
+          <ScalarProperty Name="CREDIT" ColumnName="CREDIT" />
+          <ScalarProperty Name="BALANCE" ColumnName="BALANCE" />
+          <ScalarProperty Name="F7" ColumnName="F7" />
+          <ScalarProperty Name="F8" ColumnName="F8" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C3Recon_">
+      <EntityTypeMapping TypeName="Capston2Model.C3Recon_">
+        <MappingFragment StoreEntitySet="3Recon$">
+          <ScalarProperty Name="RECON_ORDER" ColumnName="RECON_ORDER" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="PO" ColumnName="PO" />
+          <ScalarProperty Name="Payment" ColumnName="Payment" />
+          <ScalarProperty Name="Invoice" ColumnName="Invoice" />
+          <ScalarProperty Name="Shipment" ColumnName="Shipment" />
+          <ScalarProperty Name="Truck" ColumnName="Truck" />
+          <ScalarProperty Name="PetrolType" ColumnName="PetrolType" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Agent" ColumnName="Agent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C_3Recon__">
+      <EntityTypeMapping TypeName="Capston2Model.C_3Recon__">
+        <MappingFragment StoreEntitySet="'3Recon$'">
+          <ScalarProperty Name="RECON_ORDER" ColumnName="RECON_ORDER" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="PO_" ColumnName="PO#" />
+          <ScalarProperty Name="Payment_" ColumnName="Payment#" />
+          <ScalarProperty Name="Invoice_" ColumnName="Invoice#" />
+          <ScalarProperty Name="Shipment_" ColumnName="Shipment#" />
+          <ScalarProperty Name="Truck_" ColumnName="Truck#" />
+          <ScalarProperty Name="PetrolType" ColumnName="PetrolType" />
+          <ScalarProperty Name="Q_ty" ColumnName="Q'ty" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Agent" ColumnName="Agent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C4Income_">
+      <EntityTypeMapping TypeName="Capston2Model.C4Income_">
+        <MappingFragment StoreEntitySet="4Income$">
+          <ScalarProperty Name="INCOME_ORDER" ColumnName="INCOME_ORDER" />
+          <ScalarProperty Name="DATE" ColumnName="DATE" />
+          <ScalarProperty Name="Sale_GAS95" ColumnName="Sale_GAS95" />
+          <ScalarProperty Name="Sale_Diesel" ColumnName="Sale_Diesel" />
+          <ScalarProperty Name="Total_Sale" ColumnName="Total_Sale" />
+          <ScalarProperty Name="COGS_GAS95" ColumnName="COGS_GAS95" />
+          <ScalarProperty Name="COGS_Diesel" ColumnName="COGS_Diesel" />
+          <ScalarProperty Name="Total_COGS" ColumnName="Total_COGS" />
+          <ScalarProperty Name="Gross_Profit" ColumnName="Gross_Profit" />
+          <ScalarProperty Name="Officer_Salary" ColumnName="Officer_Salary" />
+          <ScalarProperty Name="GateC_Salary" ColumnName="GateC_Salary" />
+          <ScalarProperty Name="Total_salary" ColumnName="Total_salary" />
+          <ScalarProperty Name="Utility_Expense" ColumnName="Utility Expense" />
+          <ScalarProperty Name="Depreciation" ColumnName="Depreciation" />
+          <ScalarProperty Name="Net_Income_" ColumnName="Net Income " />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C_4Income__">
+      <EntityTypeMapping TypeName="Capston2Model.C_4Income__">
+        <MappingFragment StoreEntitySet="'4Income$'">
+          <ScalarProperty Name="INCOME_ORDER" ColumnName="INCOME_ORDER" />
+          <ScalarProperty Name="DATE" ColumnName="DATE" />
+          <ScalarProperty Name="Sale_GAS95" ColumnName="Sale_GAS95" />
+          <ScalarProperty Name="Sale_Diesel" ColumnName="Sale_Diesel" />
+          <ScalarProperty Name="Total_Sale" ColumnName="Total_Sale" />
+          <ScalarProperty Name="COGS_GAS95" ColumnName="COGS_GAS95" />
+          <ScalarProperty Name="COGS_Diesel" ColumnName="COGS_Diesel" />
+          <ScalarProperty Name="Total_COGS" ColumnName="Total_COGS" />
+          <ScalarProperty Name="Gross_Profit" ColumnName="Gross_Profit" />
+          <ScalarProperty Name="Officer_Salary" ColumnName="Officer_Salary" />
+          <ScalarProperty Name="GateC_Salary" ColumnName="GateC_Salary" />
+          <ScalarProperty Name="Total_salary" ColumnName="Total_salary" />
+          <ScalarProperty Name="Utility_Expense" ColumnName="Utility Expense" />
+          <ScalarProperty Name="Depreciation" ColumnName="Depreciation" />
+          <ScalarProperty Name="Net_Income_" ColumnName="Net Income " />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C5Inventory_">
+      <EntityTypeMapping TypeName="Capston2Model.C5Inventory_">
+        <MappingFragment StoreEntitySet="5Inventory$">
+          <ScalarProperty Name="Inventory_ORDER" ColumnName="Inventory_ORDER" />
+          <ScalarProperty Name="Stock" ColumnName="Stock" />
+          <ScalarProperty Name="GASOHOL95" ColumnName="GASOHOL95" />
+          <ScalarProperty Name="DIESEL" ColumnName="DIESEL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C_5Inventory__">
+      <EntityTypeMapping TypeName="Capston2Model.C_5Inventory__">
+        <MappingFragment StoreEntitySet="'5Inventory$'">
+          <ScalarProperty Name="Inventory_ORDER" ColumnName="Inventory_ORDER" />
+          <ScalarProperty Name="Stock" ColumnName="Stock" />
+          <ScalarProperty Name="GASOHOL95" ColumnName="GASOHOL95" />
+          <ScalarProperty Name="DIESEL" ColumnName="DIESEL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C6PO_">
+      <EntityTypeMapping TypeName="Capston2Model.C6PO_">
+        <MappingFragment StoreEntitySet="6PO$">
+          <ScalarProperty Name="PO_ORDER" ColumnName="PO_ORDER" />
+          <ScalarProperty Name="PO_NO" ColumnName="PO_NO" />
+          <ScalarProperty Name="PAYMENT_NO" ColumnName="PAYMENT_NO" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="CUSTOMER_ID" ColumnName="CUSTOMER_ID" />
+          <ScalarProperty Name="CUSTOMER" ColumnName="CUSTOMER" />
+          <ScalarProperty Name="TAX_PAYER_ID" ColumnName="TAX_PAYER_ID" />
+          <ScalarProperty Name="Truck" ColumnName="Truck" />
+          <ScalarProperty Name="ITEM" ColumnName="ITEM" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C_6PO__">
+      <EntityTypeMapping TypeName="Capston2Model.C_6PO__">
+        <MappingFragment StoreEntitySet="'6PO$'">
+          <ScalarProperty Name="PO_ORDER" ColumnName="PO_ORDER" />
+          <ScalarProperty Name="PO_NO" ColumnName="PO_NO" />
+          <ScalarProperty Name="PAYMENT_NO" ColumnName="PAYMENT_NO" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="CUSTOMER_ID" ColumnName="CUSTOMER_ID" />
+          <ScalarProperty Name="CUSTOMER" ColumnName="CUSTOMER" />
+          <ScalarProperty Name="TAX_PAYER_ID" ColumnName="TAX_PAYER_ID" />
+          <ScalarProperty Name="Truck" ColumnName="Truck" />
+          <ScalarProperty Name="ITEM" ColumnName="ITEM" />
+          <ScalarProperty Name="Price_Litre" ColumnName="Price/Litre" />
+          <ScalarProperty Name="Q_ty_Litre_" ColumnName="Q'ty(Litre)" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C7invoice_">
+      <EntityTypeMapping TypeName="Capston2Model.C7invoice_">
+        <MappingFragment StoreEntitySet="7invoice$">
+          <ScalarProperty Name="INVOICE_ORDER" ColumnName="INVOICE_ORDER" />
+          <ScalarProperty Name="COMPANY_NAME" ColumnName="COMPANY_NAME" />
+          <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+          <ScalarProperty Name="MAIL" ColumnName="MAIL" />
+          <ScalarProperty Name="TEL" ColumnName="TEL" />
+          <ScalarProperty Name="INVOICE_NO" ColumnName="INVOICE_NO" />
+          <ScalarProperty Name="PO_NO" ColumnName="PO_NO" />
+          <ScalarProperty Name="PAYMENT_NO" ColumnName="PAYMENT_NO" />
+          <ScalarProperty Name="DATE" ColumnName="DATE" />
+          <ScalarProperty Name="CUSTOMER_ID" ColumnName="CUSTOMER_ID" />
+          <ScalarProperty Name="CUSTOMER" ColumnName="CUSTOMER" />
+          <ScalarProperty Name="TAX_PAYER_ID" ColumnName="TAX_PAYER_ID" />
+          <ScalarProperty Name="DATE1" ColumnName="DATE1" />
+          <ScalarProperty Name="FILL_TIME_MIN" ColumnName="FILL_TIME_MIN" />
+          <ScalarProperty Name="ITEM" ColumnName="ITEM" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="val" ColumnName="val" />
+          <ScalarProperty Name="GRAND_TOTAL" ColumnName="GRAND_TOTAL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C_7invoice__">
+      <EntityTypeMapping TypeName="Capston2Model.C_7invoice__">
+        <MappingFragment StoreEntitySet="'7invoice$'">
+          <ScalarProperty Name="INVOICE_ORDER_" ColumnName="INVOICE_ORDER " />
+          <ScalarProperty Name="COMPANY_NAME" ColumnName="COMPANY_NAME" />
+          <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+          <ScalarProperty Name="MAIL" ColumnName="MAIL" />
+          <ScalarProperty Name="TEL" ColumnName="TEL" />
+          <ScalarProperty Name="INVOICE_NO" ColumnName="INVOICE_NO" />
+          <ScalarProperty Name="PO_NO" ColumnName="PO_NO" />
+          <ScalarProperty Name="PAYMENT_NO" ColumnName="PAYMENT_NO" />
+          <ScalarProperty Name="DATE" ColumnName="DATE" />
+          <ScalarProperty Name="CUSTOMER_ID" ColumnName="CUSTOMER_ID" />
+          <ScalarProperty Name="CUSTOMER" ColumnName="CUSTOMER" />
+          <ScalarProperty Name="TAX_PAYER_ID" ColumnName="TAX_PAYER_ID" />
+          <ScalarProperty Name="DATE1" ColumnName="DATE1" />
+          <ScalarProperty Name="FILL_TIME_MIN" ColumnName="FILL_TIME_MIN" />
+          <ScalarProperty Name="ITEM" ColumnName="ITEM" />
+          <ScalarProperty Name="Price_Litre" ColumnName="Price/Litre" />
+          <ScalarProperty Name="Q_ty_Litre_" ColumnName="Q'ty(Litre)" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="val7_" ColumnName="val7%" />
+          <ScalarProperty Name="GRAND_TOTAL" ColumnName="GRAND_TOTAL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C_BAY_STATION__">
+      <EntityTypeMapping TypeName="Capston2Model.C_BAY_STATION__">
+        <MappingFragment StoreEntitySet="'BAY STATION$'">
+          <ScalarProperty Name="Bay_ID" ColumnName="Bay_ID" />
+          <ScalarProperty Name="Gas_ID" ColumnName="Gas_ID" />
+          <ScalarProperty Name="BayName" ColumnName="BayName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CUSTOMER_">
+      <EntityTypeMapping TypeName="Capston2Model.CUSTOMER_">
+        <MappingFragment StoreEntitySet="CUSTOMER$">
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="Company_Name" ColumnName="Company Name" />
+          <ScalarProperty Name="Firstname_Lastname" ColumnName="Firstname_Lastname" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GAS_">
+      <EntityTypeMapping TypeName="Capston2Model.GAS_">
+        <MappingFragment StoreEntitySet="GAS$">
+          <ScalarProperty Name="GasID" ColumnName="GasID" />
+          <ScalarProperty Name="GasName" ColumnName="GasName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GASNEW_">
+      <EntityTypeMapping TypeName="Capston2Model.GASNEW_">
+        <MappingFragment StoreEntitySet="GASNEW$">
+          <ScalarProperty Name="GasID" ColumnName="GasID" />
+          <ScalarProperty Name="GasName" ColumnName="GasName" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="DIESEL_Cost" ColumnName="DIESEL Cost" />
+          <ScalarProperty Name="DIESEL_Price" ColumnName="DIESEL Price" />
+          <ScalarProperty Name="GASOHOL95_Cost" ColumnName="GASOHOL95 Cost" />
+          <ScalarProperty Name="GASOHOL95_Price" ColumnName="GASOHOL95 Price" />
+          <ScalarProperty Name="F8" ColumnName="F8" />
+          <ScalarProperty Name="F9" ColumnName="F9" />
+          <ScalarProperty Name="F10" ColumnName="F10" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Gen_Journal_">
+      <EntityTypeMapping TypeName="Capston2Model.Gen_Journal_">
+        <MappingFragment StoreEntitySet="Gen_Journal$">
+          <ScalarProperty Name="JOURNAL_ORDER" ColumnName="JOURNAL_ORDER" />
+          <ScalarProperty Name="JournalTransactionID" ColumnName="JournalTransactionID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+          <ScalarProperty Name="Ref" ColumnName="Ref" />
+          <ScalarProperty Name="Debit" ColumnName="Debit" />
+          <ScalarProperty Name="Credit" ColumnName="Credit" />
+          <ScalarProperty Name="F9" ColumnName="F9" />
+          <ScalarProperty Name="F10" ColumnName="F10" />
+          <ScalarProperty Name="F11" ColumnName="F11" />
+          <ScalarProperty Name="date1" ColumnName="date1" />
+          <ScalarProperty Name="Receivable" ColumnName="Receivable" />
+          <ScalarProperty Name="COGS" ColumnName="COGS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="INVOICE_">
+      <EntityTypeMapping TypeName="Capston2Model.INVOICE_">
+        <MappingFragment StoreEntitySet="INVOICE$">
+          <ScalarProperty Name="Invoice_ID" ColumnName="Invoice_ID" />
+          <ScalarProperty Name="PO_ID" ColumnName="PO_ID" />
+          <ScalarProperty Name="DATE" ColumnName="DATE" />
+          <ScalarProperty Name="DEL_NUM" ColumnName="DEL_NUM" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="Pay_ID__Address_" ColumnName="Pay_ID (Address)" />
+          <ScalarProperty Name="Filling_time" ColumnName="Filling time" />
+          <ScalarProperty Name="F8" ColumnName="F8" />
+          <ScalarProperty Name="Amount_Filling_Volume" ColumnName="Amount Filling Volume" />
+          <ScalarProperty Name="Price_per_volume" ColumnName="Price per volume" />
+          <ScalarProperty Name="F11" ColumnName="F11" />
+          <ScalarProperty Name="Total_Price__Baht_" ColumnName="Total Price (Baht)" />
+          <ScalarProperty Name="F13" ColumnName="F13" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C_JOUNAL_TRANSECTION__">
+      <EntityTypeMapping TypeName="Capston2Model.C_JOUNAL_TRANSECTION__">
+        <MappingFragment StoreEntitySet="'JOUNAL TRANSECTION$'">
+          <ScalarProperty Name="Fianance_ID" ColumnName="Fianance_ID" />
+          <ScalarProperty Name="DATE" ColumnName="DATE" />
+          <ScalarProperty Name="TransName" ColumnName="TransName" />
+          <ScalarProperty Name="TransType" ColumnName="TransType" />
+          <ScalarProperty Name="TransValue" ColumnName="TransValue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PAYMENT_">
+      <EntityTypeMapping TypeName="Capston2Model.PAYMENT_">
+        <MappingFragment StoreEntitySet="PAYMENT$">
+          <ScalarProperty Name="Pay_ID__Address_" ColumnName="Pay_ID (Address)" />
+          <ScalarProperty Name="Card_ID" ColumnName="Card_ID" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="Company_Name" ColumnName="Company Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PURCHEASE_">
+      <EntityTypeMapping TypeName="Capston2Model.PURCHEASE_">
+        <MappingFragment StoreEntitySet="PURCHEASE$">
+          <ScalarProperty Name="PO_ID" ColumnName="PO_ID" />
+          <ScalarProperty Name="SERVICE_ID" ColumnName="SERVICE_ID" />
+          <ScalarProperty Name="GAS_ID" ColumnName="GAS_ID" />
+          <ScalarProperty Name="BAY_ID" ColumnName="BAY_ID" />
+          <ScalarProperty Name="TRUCK_ID" ColumnName="TRUCK_ID" />
+          <ScalarProperty Name="DATE" ColumnName="DATE" />
+          <ScalarProperty Name="WeightID" ColumnName="WeightID" />
+          <ScalarProperty Name="FILL_START_TIME" ColumnName="FILL_START_TIME" />
+          <ScalarProperty Name="FILL_END_TIME" ColumnName="FILL_END_TIME" />
+          <ScalarProperty Name="TIME_DIF" ColumnName="TIME_DIF" />
+          <ScalarProperty Name="FILLINGTIME" ColumnName="FILLINGTIME" />
+          <ScalarProperty Name="Volume___200_" ColumnName="Volume (*200)" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C_SALE_OFFICE__">
+      <EntityTypeMapping TypeName="Capston2Model.C_SALE_OFFICE__">
+        <MappingFragment StoreEntitySet="'SALE OFFICE$'">
+          <ScalarProperty Name="Service_ID" ColumnName="Service_ID" />
+          <ScalarProperty Name="Finance_ID" ColumnName="Finance_ID" />
+          <ScalarProperty Name="Staff_ID" ColumnName="Staff_ID" />
+          <ScalarProperty Name="Queue" ColumnName="Queue" />
+          <ScalarProperty Name="F5" ColumnName="F5" />
+          <ScalarProperty Name="F6" ColumnName="F6" />
+          <ScalarProperty Name="F7" ColumnName="F7" />
+          <ScalarProperty Name="F8" ColumnName="F8" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STAFF_">
+      <EntityTypeMapping TypeName="Capston2Model.STAFF_">
+        <MappingFragment StoreEntitySet="STAFF$">
+          <ScalarProperty Name="Staff_ID" ColumnName="Staff_ID" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
+          <ScalarProperty Name="Firstname_Lastname" ColumnName="Firstname_Lastname" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="BOD" ColumnName="BOD" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="F10" ColumnName="F10" />
+          <ScalarProperty Name="F11" ColumnName="F11" />
+          <ScalarProperty Name="F12" ColumnName="F12" />
+          <ScalarProperty Name="F13" ColumnName="F13" />
+          <ScalarProperty Name="F14" ColumnName="F14" />
+          <ScalarProperty Name="F15" ColumnName="F15" />
+          <ScalarProperty Name="F16" ColumnName="F16" />
+          <ScalarProperty Name="F17" ColumnName="F17" />
+          <ScalarProperty Name="F18" ColumnName="F18" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRUCK_">
+      <EntityTypeMapping TypeName="Capston2Model.TRUCK_">
+        <MappingFragment StoreEntitySet="TRUCK$">
+          <ScalarProperty Name="Truck_ID" ColumnName="Truck_ID" />
+          <ScalarProperty Name="Customer_ID" ColumnName="Customer_ID" />
+          <ScalarProperty Name="Driver_Firstname_Lastname" ColumnName="Driver_Firstname_Lastname" />
+          <ScalarProperty Name="VEHICLE_NUMBER" ColumnName="VEHICLE_NUMBER" />
+          <ScalarProperty Name="F5" ColumnName="F5" />
+          <ScalarProperty Name="F6" ColumnName="F6" />
+          <ScalarProperty Name="F7" ColumnName="F7" />
+          <ScalarProperty Name="Company_Name" ColumnName="Company Name" />
+          <ScalarProperty Name="shipping_Address" ColumnName="shipping Address" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WEIGHT_">
+      <EntityTypeMapping TypeName="Capston2Model.WEIGHT_">
+        <MappingFragment StoreEntitySet="WEIGHT$">
+          <ScalarProperty Name="WeightID" ColumnName="WeightID" />
+          <ScalarProperty Name="QUEUE" ColumnName="QUEUE" />
+          <ScalarProperty Name="TIME_In" ColumnName="TIME In" />
+          <ScalarProperty Name="TIME_Out" ColumnName="TIME Out" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

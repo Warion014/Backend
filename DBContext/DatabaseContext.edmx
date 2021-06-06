@@ -1,0 +1,1414 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Capston2Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="1Jounal$">
+          <Key>
+            <PropertyRef Name="JOURNAL_ORDER" />
+          </Key>
+          <Property Name="JOURNAL_ORDER" Type="float" Nullable="false" />
+          <Property Name="JournalTransactionID" Type="float" />
+          <Property Name="Date" Type="datetime" />
+          <Property Name="Time" Type="datetime" />
+          <Property Name="Account" Type="nvarchar" MaxLength="255" />
+          <Property Name="Ref" Type="float" />
+          <Property Name="Debit" Type="float" />
+          <Property Name="Credit" Type="float" />
+          <Property Name="F9" Type="nvarchar" MaxLength="255" />
+          <Property Name="F10" Type="nvarchar" MaxLength="255" />
+          <Property Name="F11" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="2Ledeger(AR)$">
+          <Key>
+            <PropertyRef Name="ACC_RE_ORDER" />
+          </Key>
+          <Property Name="ACC_RE_ORDER" Type="float" Nullable="false" />
+          <Property Name="DATE" Type="datetime" />
+          <Property Name="DESCRIPTION" Type="nvarchar" MaxLength="255" />
+          <Property Name="DEBIT" Type="float" />
+          <Property Name="CREDIT" Type="float" />
+          <Property Name="BALANCE" Type="float" />
+        </EntityType>
+        <EntityType Name="2Ledger(AP)$">
+          <Key>
+            <PropertyRef Name="ACC_PAY_ORDER" />
+          </Key>
+          <Property Name="ACC_PAY_ORDER" Type="float" Nullable="false" />
+          <Property Name="DATE" Type="datetime" />
+          <Property Name="DESCRIPTION" Type="nvarchar" MaxLength="255" />
+          <Property Name="DEBIT" Type="float" />
+          <Property Name="CREDIT" Type="float" />
+          <Property Name="BALANCE" Type="float" />
+          <Property Name="F7" Type="nvarchar" MaxLength="255" />
+          <Property Name="F8" Type="nvarchar" MaxLength="255" />
+          <Property Name="F9" Type="nvarchar" MaxLength="255" />
+          <Property Name="F10" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="2Ledger(Cash)$">
+          <Key>
+            <PropertyRef Name="CASH_ORDER" />
+          </Key>
+          <Property Name="CASH_ORDER" Type="float" Nullable="false" />
+          <Property Name="DATE" Type="datetime" />
+          <Property Name="DESCRIPTION" Type="nvarchar" MaxLength="255" />
+          <Property Name="DEBIT" Type="float" />
+          <Property Name="CREDIT" Type="float" />
+          <Property Name="BALANCE" Type="float" />
+        </EntityType>
+        <EntityType Name="2Ledger(StockDeisel)$">
+          <Key>
+            <PropertyRef Name="SD_ORDER" />
+          </Key>
+          <Property Name="SD_ORDER" Type="float" Nullable="false" />
+          <Property Name="DATE" Type="datetime" />
+          <Property Name="DESCRIPTION" Type="nvarchar" MaxLength="255" />
+          <Property Name="DEBIT" Type="float" />
+          <Property Name="CREDIT" Type="float" />
+          <Property Name="BALANCE" Type="float" />
+          <Property Name="F7" Type="nvarchar" MaxLength="255" />
+          <Property Name="F8" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="2Ledger(StockGasohol95)$">
+          <Key>
+            <PropertyRef Name="SG_ORDER" />
+          </Key>
+          <Property Name="SG_ORDER" Type="float" Nullable="false" />
+          <Property Name="DATE" Type="datetime" />
+          <Property Name="DESCRIPTION" Type="nvarchar" MaxLength="255" />
+          <Property Name="DEBIT" Type="float" />
+          <Property Name="CREDIT" Type="float" />
+          <Property Name="BALANCE" Type="float" />
+          <Property Name="F7" Type="nvarchar" MaxLength="255" />
+          <Property Name="F8" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="3Recon$">
+          <Key>
+            <PropertyRef Name="RECON_ORDER" />
+          </Key>
+          <Property Name="RECON_ORDER" Type="float" Nullable="false" />
+          <Property Name="Date" Type="datetime" />
+          <Property Name="PO" Type="float" />
+          <Property Name="Payment" Type="float" />
+          <Property Name="Invoice" Type="float" />
+          <Property Name="Shipment" Type="float" />
+          <Property Name="Truck" Type="nvarchar" MaxLength="255" />
+          <Property Name="PetrolType" Type="nvarchar" MaxLength="255" />
+          <Property Name="Qty" Type="float" />
+          <Property Name="Amount" Type="float" />
+          <Property Name="Agent" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="'3Recon$'">
+          <Key>
+            <PropertyRef Name="RECON_ORDER" />
+          </Key>
+          <Property Name="RECON_ORDER" Type="float" Nullable="false" />
+          <Property Name="Date" Type="datetime" />
+          <Property Name="PO#" Type="float" />
+          <Property Name="Payment#" Type="float" />
+          <Property Name="Invoice#" Type="float" />
+          <Property Name="Shipment#" Type="float" />
+          <Property Name="Truck#" Type="nvarchar" MaxLength="255" />
+          <Property Name="PetrolType" Type="nvarchar" MaxLength="255" />
+          <Property Name="Q'ty" Type="float" />
+          <Property Name="Amount" Type="float" />
+          <Property Name="Agent" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="4Income$">
+          <Key>
+            <PropertyRef Name="INCOME_ORDER" />
+          </Key>
+          <Property Name="INCOME_ORDER" Type="float" Nullable="false" />
+          <Property Name="DATE" Type="datetime" />
+          <Property Name="Sale_GAS95" Type="float" />
+          <Property Name="Sale_Diesel" Type="float" />
+          <Property Name="Total_Sale" Type="float" />
+          <Property Name="COGS_GAS95" Type="float" />
+          <Property Name="COGS_Diesel" Type="float" />
+          <Property Name="Total_COGS" Type="float" />
+          <Property Name="Gross_Profit" Type="float" />
+          <Property Name="Officer_Salary" Type="float" />
+          <Property Name="GateC_Salary" Type="float" />
+          <Property Name="Total_salary" Type="float" />
+          <Property Name="Utility Expense" Type="float" />
+          <Property Name="Depreciation" Type="float" />
+          <Property Name="Net Income " Type="float" />
+        </EntityType>
+        <EntityType Name="'4Income$'">
+          <Key>
+            <PropertyRef Name="INCOME_ORDER" />
+          </Key>
+          <Property Name="INCOME_ORDER" Type="float" Nullable="false" />
+          <Property Name="DATE" Type="datetime" />
+          <Property Name="Sale_GAS95" Type="float" />
+          <Property Name="Sale_Diesel" Type="float" />
+          <Property Name="Total_Sale" Type="float" />
+          <Property Name="COGS_GAS95" Type="float" />
+          <Property Name="COGS_Diesel" Type="float" />
+          <Property Name="Total_COGS" Type="float" />
+          <Property Name="Gross_Profit" Type="float" />
+          <Property Name="Officer_Salary" Type="float" />
+          <Property Name="GateC_Salary" Type="float" />
+          <Property Name="Total_salary" Type="float" />
+          <Property Name="Utility Expense" Type="float" />
+          <Property Name="Depreciation" Type="float" />
+          <Property Name="Net Income " Type="float" />
+        </EntityType>
+        <EntityType Name="5Inventory$">
+          <Key>
+            <PropertyRef Name="Inventory_ORDER" />
+          </Key>
+          <Property Name="Inventory_ORDER" Type="float" Nullable="false" />
+          <Property Name="Stock" Type="nvarchar" MaxLength="255" />
+          <Property Name="GASOHOL95" Type="float" />
+          <Property Name="DIESEL" Type="float" />
+        </EntityType>
+        <EntityType Name="'5Inventory$'">
+          <Key>
+            <PropertyRef Name="Inventory_ORDER" />
+          </Key>
+          <Property Name="Inventory_ORDER" Type="float" Nullable="false" />
+          <Property Name="Stock" Type="nvarchar" MaxLength="255" />
+          <Property Name="GASOHOL95" Type="float" />
+          <Property Name="DIESEL" Type="float" />
+        </EntityType>
+        <EntityType Name="6PO$">
+          <Key>
+            <PropertyRef Name="PO_ORDER" />
+          </Key>
+          <Property Name="PO_ORDER" Type="float" Nullable="false" />
+          <Property Name="PO_NO" Type="float" />
+          <Property Name="PAYMENT_NO" Type="float" />
+          <Property Name="Date" Type="datetime" />
+          <Property Name="CUSTOMER_ID" Type="float" />
+          <Property Name="CUSTOMER" Type="nvarchar" MaxLength="255" />
+          <Property Name="TAX_PAYER_ID" Type="float" />
+          <Property Name="Truck" Type="nvarchar" MaxLength="255" />
+          <Property Name="ITEM" Type="nvarchar" MaxLength="255" />
+          <Property Name="Price" Type="float" />
+          <Property Name="Qty" Type="float" />
+          <Property Name="Amount" Type="float" />
+        </EntityType>
+        <EntityType Name="'6PO$'">
+          <Key>
+            <PropertyRef Name="PO_ORDER" />
+          </Key>
+          <Property Name="PO_ORDER" Type="float" Nullable="false" />
+          <Property Name="PO_NO" Type="float" />
+          <Property Name="PAYMENT_NO" Type="float" />
+          <Property Name="Date" Type="datetime" />
+          <Property Name="CUSTOMER_ID" Type="float" />
+          <Property Name="CUSTOMER" Type="nvarchar" MaxLength="255" />
+          <Property Name="TAX_PAYER_ID" Type="float" />
+          <Property Name="Truck" Type="nvarchar" MaxLength="255" />
+          <Property Name="ITEM" Type="nvarchar" MaxLength="255" />
+          <Property Name="Price/Litre" Type="float" />
+          <Property Name="Q'ty(Litre)" Type="float" />
+          <Property Name="Amount" Type="float" />
+        </EntityType>
+        <EntityType Name="7invoice$">
+          <Key>
+            <PropertyRef Name="INVOICE_ORDER" />
+          </Key>
+          <Property Name="INVOICE_ORDER" Type="float" Nullable="false" />
+          <Property Name="COMPANY_NAME" Type="nvarchar" MaxLength="255" />
+          <Property Name="ADDRESS" Type="nvarchar" MaxLength="255" />
+          <Property Name="MAIL" Type="nvarchar" MaxLength="255" />
+          <Property Name="TEL" Type="nvarchar" MaxLength="255" />
+          <Property Name="INVOICE_NO" Type="float" />
+          <Property Name="PO_NO" Type="float" />
+          <Property Name="PAYMENT_NO" Type="float" />
+          <Property Name="DATE" Type="datetime" />
+          <Property Name="CUSTOMER_ID" Type="float" />
+          <Property Name="CUSTOMER" Type="nvarchar" MaxLength="255" />
+          <Property Name="TAX_PAYER_ID" Type="float" />
+          <Property Name="DATE1" Type="datetime" />
+          <Property Name="FILL_TIME_MIN" Type="float" />
+          <Property Name="ITEM" Type="nvarchar" MaxLength="255" />
+          <Property Name="Price" Type="float" />
+          <Property Name="Qty" Type="float" />
+          <Property Name="Amount" Type="float" />
+          <Property Name="val" Type="float" />
+          <Property Name="GRAND_TOTAL" Type="float" />
+        </EntityType>
+        <EntityType Name="'7invoice$'">
+          <Key>
+            <PropertyRef Name="INVOICE_ORDER " />
+          </Key>
+          <Property Name="INVOICE_ORDER " Type="float" Nullable="false" />
+          <Property Name="COMPANY_NAME" Type="nvarchar" MaxLength="255" />
+          <Property Name="ADDRESS" Type="nvarchar" MaxLength="255" />
+          <Property Name="MAIL" Type="nvarchar" MaxLength="255" />
+          <Property Name="TEL" Type="nvarchar" MaxLength="255" />
+          <Property Name="INVOICE_NO" Type="float" />
+          <Property Name="PO_NO" Type="float" />
+          <Property Name="PAYMENT_NO" Type="float" />
+          <Property Name="DATE" Type="datetime" />
+          <Property Name="CUSTOMER_ID" Type="float" />
+          <Property Name="CUSTOMER" Type="nvarchar" MaxLength="255" />
+          <Property Name="TAX_PAYER_ID" Type="float" />
+          <Property Name="DATE1" Type="datetime" />
+          <Property Name="FILL_TIME_MIN" Type="float" />
+          <Property Name="ITEM" Type="nvarchar" MaxLength="255" />
+          <Property Name="Price/Litre" Type="float" />
+          <Property Name="Q'ty(Litre)" Type="float" />
+          <Property Name="Amount" Type="float" />
+          <Property Name="val7%" Type="float" />
+          <Property Name="GRAND_TOTAL" Type="float" />
+        </EntityType>
+        <EntityType Name="'BAY STATION$'">
+          <Key>
+            <PropertyRef Name="Bay_ID" />
+          </Key>
+          <Property Name="Bay_ID" Type="float" Nullable="false" />
+          <Property Name="Gas_ID" Type="float" />
+          <Property Name="BayName" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="CUSTOMER$">
+          <Key>
+            <PropertyRef Name="CustomerID" />
+          </Key>
+          <Property Name="CustomerID" Type="float" Nullable="false" />
+          <Property Name="Company Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="Firstname_Lastname" Type="nvarchar" MaxLength="255" />
+          <Property Name="Email" Type="nvarchar" MaxLength="255" />
+          <Property Name="Address" Type="float" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="GAS$">
+          <Key>
+            <PropertyRef Name="GasID" />
+          </Key>
+          <Property Name="GasID" Type="float" Nullable="false" />
+          <Property Name="GasName" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="GASNEW$">
+          <Key>
+            <PropertyRef Name="GasID" />
+          </Key>
+          <Property Name="GasID" Type="float" Nullable="false" />
+          <Property Name="GasName" Type="nvarchar" MaxLength="255" />
+          <Property Name="Date" Type="datetime" />
+          <Property Name="DIESEL Cost" Type="float" />
+          <Property Name="DIESEL Price" Type="float" />
+          <Property Name="GASOHOL95 Cost" Type="float" />
+          <Property Name="GASOHOL95 Price" Type="float" />
+          <Property Name="F8" Type="nvarchar" MaxLength="255" />
+          <Property Name="F9" Type="nvarchar" MaxLength="255" />
+          <Property Name="F10" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Gen_Journal$">
+          <Key>
+            <PropertyRef Name="JOURNAL_ORDER" />
+          </Key>
+          <Property Name="JOURNAL_ORDER" Type="float" Nullable="false" />
+          <Property Name="JournalTransactionID" Type="float" />
+          <Property Name="Date" Type="datetime" />
+          <Property Name="Time" Type="datetime" />
+          <Property Name="Account" Type="nvarchar" MaxLength="255" />
+          <Property Name="Ref" Type="float" />
+          <Property Name="Debit" Type="float" />
+          <Property Name="Credit" Type="float" />
+          <Property Name="F9" Type="nvarchar" MaxLength="255" />
+          <Property Name="F10" Type="nvarchar" MaxLength="255" />
+          <Property Name="F11" Type="nvarchar" MaxLength="255" />
+          <Property Name="date1" Type="nvarchar" MaxLength="255" />
+          <Property Name="Receivable" Type="float" />
+          <Property Name="COGS" Type="float" />
+        </EntityType>
+        <EntityType Name="INVOICE$">
+          <Key>
+            <PropertyRef Name="Invoice_ID" />
+          </Key>
+          <Property Name="Invoice_ID" Type="float" Nullable="false" />
+          <Property Name="PO_ID" Type="float" />
+          <Property Name="DATE" Type="datetime" />
+          <Property Name="DEL_NUM" Type="float" />
+          <Property Name="CustomerID" Type="float" />
+          <Property Name="Pay_ID (Address)" Type="float" />
+          <Property Name="Filling time" Type="float" />
+          <Property Name="F8" Type="nvarchar" MaxLength="255" />
+          <Property Name="Amount Filling Volume" Type="float" />
+          <Property Name="Price per volume" Type="float" />
+          <Property Name="F11" Type="float" />
+          <Property Name="Total Price (Baht)" Type="float" />
+          <Property Name="F13" Type="float" />
+        </EntityType>
+        <EntityType Name="'JOUNAL TRANSECTION$'">
+          <Key>
+            <PropertyRef Name="Fianance_ID" />
+          </Key>
+          <Property Name="Fianance_ID" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="DATE" Type="datetime" />
+          <Property Name="TransName" Type="nvarchar" MaxLength="255" />
+          <Property Name="TransType" Type="nvarchar" MaxLength="255" />
+          <Property Name="TransValue" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="PAYMENT$">
+          <Key>
+            <PropertyRef Name="Pay_ID (Address)" />
+          </Key>
+          <Property Name="Pay_ID (Address)" Type="float" Nullable="false" />
+          <Property Name="Card_ID" Type="float" />
+          <Property Name="CustomerID" Type="float" />
+          <Property Name="Company Name" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="PURCHEASE$">
+          <Key>
+            <PropertyRef Name="PO_ID" />
+          </Key>
+          <Property Name="PO_ID" Type="float" Nullable="false" />
+          <Property Name="SERVICE_ID" Type="float" />
+          <Property Name="GAS_ID" Type="float" />
+          <Property Name="BAY_ID" Type="float" />
+          <Property Name="TRUCK_ID" Type="float" />
+          <Property Name="DATE" Type="datetime" />
+          <Property Name="WeightID" Type="nvarchar" MaxLength="255" />
+          <Property Name="FILL_START_TIME" Type="datetime" />
+          <Property Name="FILL_END_TIME" Type="datetime" />
+          <Property Name="TIME_DIF" Type="datetime" />
+          <Property Name="FILLINGTIME" Type="float" />
+          <Property Name="Volume (*200)" Type="float" />
+          <Property Name="Status" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="'SALE OFFICE$'">
+          <Key>
+            <PropertyRef Name="Service_ID" />
+          </Key>
+          <Property Name="Service_ID" Type="float" Nullable="false" />
+          <Property Name="Finance_ID" Type="nvarchar" MaxLength="255" />
+          <Property Name="Staff_ID" Type="float" />
+          <Property Name="Queue" Type="nvarchar" MaxLength="255" />
+          <Property Name="F5" Type="nvarchar" MaxLength="255" />
+          <Property Name="F6" Type="nvarchar" MaxLength="255" />
+          <Property Name="F7" Type="nvarchar" MaxLength="255" />
+          <Property Name="F8" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="STAFF$">
+          <Key>
+            <PropertyRef Name="Staff_ID" />
+          </Key>
+          <Property Name="Staff_ID" Type="float" Nullable="false" />
+          <Property Name="Username" Type="nvarchar" MaxLength="255" />
+          <Property Name="UserPassword" Type="float" />
+          <Property Name="Firstname_Lastname" Type="nvarchar" MaxLength="255" />
+          <Property Name="Email" Type="nvarchar" MaxLength="255" />
+          <Property Name="BOD" Type="datetime" />
+          <Property Name="Address" Type="float" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="255" />
+          <Property Name="Position" Type="nvarchar" MaxLength="255" />
+          <Property Name="F10" Type="nvarchar" MaxLength="255" />
+          <Property Name="F11" Type="nvarchar" MaxLength="255" />
+          <Property Name="F12" Type="nvarchar" MaxLength="255" />
+          <Property Name="F13" Type="nvarchar" MaxLength="255" />
+          <Property Name="F14" Type="nvarchar" MaxLength="255" />
+          <Property Name="F15" Type="nvarchar" MaxLength="255" />
+          <Property Name="F16" Type="nvarchar" MaxLength="255" />
+          <Property Name="F17" Type="nvarchar" MaxLength="255" />
+          <Property Name="F18" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="TRUCK$">
+          <Key>
+            <PropertyRef Name="Truck_ID" />
+          </Key>
+          <Property Name="Truck_ID" Type="float" Nullable="false" />
+          <Property Name="Customer_ID" Type="float" />
+          <Property Name="Driver_Firstname_Lastname" Type="nvarchar" MaxLength="255" />
+          <Property Name="VEHICLE_NUMBER" Type="nvarchar" MaxLength="255" />
+          <Property Name="F5" Type="nvarchar" MaxLength="255" />
+          <Property Name="F6" Type="nvarchar" MaxLength="255" />
+          <Property Name="F7" Type="nvarchar" MaxLength="255" />
+          <Property Name="Company Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="shipping Address" Type="float" />
+        </EntityType>
+        <EntityType Name="WEIGHT$">
+          <Key>
+            <PropertyRef Name="WeightID" />
+          </Key>
+          <Property Name="WeightID" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="QUEUE" Type="nvarchar" MaxLength="255" />
+          <Property Name="TIME In" Type="datetime" />
+          <Property Name="TIME Out" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityContainer Name="Capston2ModelStoreContainer">
+          <EntitySet Name="1Jounal$" EntityType="Self.1Jounal$" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="2Ledeger(AR)$" EntityType="Self.2Ledeger(AR)$" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="2Ledger(AP)$" EntityType="Self.2Ledger(AP)$" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="2Ledger(Cash)$" EntityType="Self.2Ledger(Cash)$" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="2Ledger(StockDeisel)$" EntityType="Self.2Ledger(StockDeisel)$" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="2Ledger(StockGasohol95)$" EntityType="Self.2Ledger(StockGasohol95)$" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="3Recon$" EntityType="Self.3Recon$" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="'3Recon$'" EntityType="Self.'3Recon$'" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="4Income$" EntityType="Self.4Income$" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="'4Income$'" EntityType="Self.'4Income$'" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="5Inventory$" EntityType="Self.5Inventory$" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="'5Inventory$'" EntityType="Self.'5Inventory$'" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="6PO$" EntityType="Self.6PO$" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="'6PO$'" EntityType="Self.'6PO$'" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="7invoice$" EntityType="Self.7invoice$" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="'7invoice$'" EntityType="Self.'7invoice$'" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="'BAY STATION$'" EntityType="Self.'BAY STATION$'" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CUSTOMER$" EntityType="Self.CUSTOMER$" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GAS$" EntityType="Self.GAS$" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GASNEW$" EntityType="Self.GASNEW$" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Gen_Journal$" EntityType="Self.Gen_Journal$" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="INVOICE$" EntityType="Self.INVOICE$" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="'JOUNAL TRANSECTION$'" EntityType="Self.'JOUNAL TRANSECTION$'" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PAYMENT$" EntityType="Self.PAYMENT$" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PURCHEASE$" EntityType="Self.PURCHEASE$" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="'SALE OFFICE$'" EntityType="Self.'SALE OFFICE$'" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="STAFF$" EntityType="Self.STAFF$" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TRUCK$" EntityType="Self.TRUCK$" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="WEIGHT$" EntityType="Self.WEIGHT$" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Capston2Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="C1Jounal_">
+          <Key>
+            <PropertyRef Name="JOURNAL_ORDER" />
+          </Key>
+          <Property Name="JOURNAL_ORDER" Type="Double" Nullable="false" />
+          <Property Name="JournalTransactionID" Type="Double" />
+          <Property Name="Date" Type="DateTime" Precision="3" />
+          <Property Name="Time" Type="DateTime" Precision="3" />
+          <Property Name="Account" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Ref" Type="Double" />
+          <Property Name="Debit" Type="Double" />
+          <Property Name="Credit" Type="Double" />
+          <Property Name="F9" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="F10" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="F11" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="C2Ledeger_AR__">
+          <Key>
+            <PropertyRef Name="ACC_RE_ORDER" />
+          </Key>
+          <Property Name="ACC_RE_ORDER" Type="Double" Nullable="false" />
+          <Property Name="DATE" Type="DateTime" Precision="3" />
+          <Property Name="DESCRIPTION" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DEBIT" Type="Double" />
+          <Property Name="CREDIT" Type="Double" />
+          <Property Name="BALANCE" Type="Double" />
+        </EntityType>
+        <EntityType Name="C2Ledger_AP__">
+          <Key>
+            <PropertyRef Name="ACC_PAY_ORDER" />
+          </Key>
+          <Property Name="ACC_PAY_ORDER" Type="Double" Nullable="false" />
+          <Property Name="DATE" Type="DateTime" Precision="3" />
+          <Property Name="DESCRIPTION" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DEBIT" Type="Double" />
+          <Property Name="CREDIT" Type="Double" />
+          <Property Name="BALANCE" Type="Double" />
+          <Property Name="F7" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="F8" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="F9" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="F10" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="C2Ledger_Cash__">
+          <Key>
+            <PropertyRef Name="CASH_ORDER" />
+          </Key>
+          <Property Name="CASH_ORDER" Type="Double" Nullable="false" />
+          <Property Name="DATE" Type="DateTime" Precision="3" />
+          <Property Name="DESCRIPTION" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DEBIT" Type="Double" />
+          <Property Name="CREDIT" Type="Double" />
+          <Property Name="BALANCE" Type="Double" />
+        </EntityType>
+        <EntityType Name="C2Ledger_StockDeisel__">
+          <Key>
+            <PropertyRef Name="SD_ORDER" />
+          </Key>
+          <Property Name="SD_ORDER" Type="Double" Nullable="false" />
+          <Property Name="DATE" Type="DateTime" Precision="3" />
+          <Property Name="DESCRIPTION" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DEBIT" Type="Double" />
+          <Property Name="CREDIT" Type="Double" />
+          <Property Name="BALANCE" Type="Double" />
+          <Property Name="F7" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="F8" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="C2Ledger_StockGasohol95__">
+          <Key>
+            <PropertyRef Name="SG_ORDER" />
+          </Key>
+          <Property Name="SG_ORDER" Type="Double" Nullable="false" />
+          <Property Name="DATE" Type="DateTime" Precision="3" />
+          <Property Name="DESCRIPTION" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DEBIT" Type="Double" />
+          <Property Name="CREDIT" Type="Double" />
+          <Property Name="BALANCE" Type="Double" />
+          <Property Name="F7" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="F8" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="C3Recon_">
+          <Key>
+            <PropertyRef Name="RECON_ORDER" />
+          </Key>
+          <Property Name="RECON_ORDER" Type="Double" Nullable="false" />
+          <Property Name="Date" Type="DateTime" Precision="3" />
+          <Property Name="PO" Type="Double" />
+          <Property Name="Payment" Type="Double" />
+          <Property Name="Invoice" Type="Double" />
+          <Property Name="Shipment" Type="Double" />
+          <Property Name="Truck" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="PetrolType" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Qty" Type="Double" />
+          <Property Name="Amount" Type="Double" />
+          <Property Name="Agent" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="C_3Recon__">
+          <Key>
+            <PropertyRef Name="RECON_ORDER" />
+          </Key>
+          <Property Name="RECON_ORDER" Type="Double" Nullable="false" />
+          <Property Name="Date" Type="DateTime" Precision="3" />
+          <Property Name="PO_" Type="Double" />
+          <Property Name="Payment_" Type="Double" />
+          <Property Name="Invoice_" Type="Double" />
+          <Property Name="Shipment_" Type="Double" />
+          <Property Name="Truck_" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="PetrolType" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Q_ty" Type="Double" />
+          <Property Name="Amount" Type="Double" />
+          <Property Name="Agent" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="C4Income_">
+          <Key>
+            <PropertyRef Name="INCOME_ORDER" />
+          </Key>
+          <Property Name="INCOME_ORDER" Type="Double" Nullable="false" />
+          <Property Name="DATE" Type="DateTime" Precision="3" />
+          <Property Name="Sale_GAS95" Type="Double" />
+          <Property Name="Sale_Diesel" Type="Double" />
+          <Property Name="Total_Sale" Type="Double" />
+          <Property Name="COGS_GAS95" Type="Double" />
+          <Property Name="COGS_Diesel" Type="Double" />
+          <Property Name="Total_COGS" Type="Double" />
+          <Property Name="Gross_Profit" Type="Double" />
+          <Property Name="Officer_Salary" Type="Double" />
+          <Property Name="GateC_Salary" Type="Double" />
+          <Property Name="Total_salary" Type="Double" />
+          <Property Name="Utility_Expense" Type="Double" />
+          <Property Name="Depreciation" Type="Double" />
+          <Property Name="Net_Income_" Type="Double" />
+        </EntityType>
+        <EntityType Name="C_4Income__">
+          <Key>
+            <PropertyRef Name="INCOME_ORDER" />
+          </Key>
+          <Property Name="INCOME_ORDER" Type="Double" Nullable="false" />
+          <Property Name="DATE" Type="DateTime" Precision="3" />
+          <Property Name="Sale_GAS95" Type="Double" />
+          <Property Name="Sale_Diesel" Type="Double" />
+          <Property Name="Total_Sale" Type="Double" />
+          <Property Name="COGS_GAS95" Type="Double" />
+          <Property Name="COGS_Diesel" Type="Double" />
+          <Property Name="Total_COGS" Type="Double" />
+          <Property Name="Gross_Profit" Type="Double" />
+          <Property Name="Officer_Salary" Type="Double" />
+          <Property Name="GateC_Salary" Type="Double" />
+          <Property Name="Total_salary" Type="Double" />
+          <Property Name="Utility_Expense" Type="Double" />
+          <Property Name="Depreciation" Type="Double" />
+          <Property Name="Net_Income_" Type="Double" />
+        </EntityType>
+        <EntityType Name="C5Inventory_">
+          <Key>
+            <PropertyRef Name="Inventory_ORDER" />
+          </Key>
+          <Property Name="Inventory_ORDER" Type="Double" Nullable="false" />
+          <Property Name="Stock" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="GASOHOL95" Type="Double" />
+          <Property Name="DIESEL" Type="Double" />
+        </EntityType>
+        <EntityType Name="C_5Inventory__">
+          <Key>
+            <PropertyRef Name="Inventory_ORDER" />
+          </Key>
+          <Property Name="Inventory_ORDER" Type="Double" Nullable="false" />
+          <Property Name="Stock" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="GASOHOL95" Type="Double" />
+          <Property Name="DIESEL" Type="Double" />
+        </EntityType>
+        <EntityType Name="C6PO_">
+          <Key>
+            <PropertyRef Name="PO_ORDER" />
+          </Key>
+          <Property Name="PO_ORDER" Type="Double" Nullable="false" />
+          <Property Name="PO_NO" Type="Double" />
+          <Property Name="PAYMENT_NO" Type="Double" />
+          <Property Name="Date" Type="DateTime" Precision="3" />
+          <Property Name="CUSTOMER_ID" Type="Double" />
+          <Property Name="CUSTOMER" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="TAX_PAYER_ID" Type="Double" />
+          <Property Name="Truck" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ITEM" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Price" Type="Double" />
+          <Property Name="Qty" Type="Double" />
+          <Property Name="Amount" Type="Double" />
+        </EntityType>
+        <EntityType Name="C_6PO__">
+          <Key>
+            <PropertyRef Name="PO_ORDER" />
+          </Key>
+          <Property Name="PO_ORDER" Type="Double" Nullable="false" />
+          <Property Name="PO_NO" Type="Double" />
+          <Property Name="PAYMENT_NO" Type="Double" />
+          <Property Name="Date" Type="DateTime" Precision="3" />
+          <Property Name="CUSTOMER_ID" Type="Double" />
+          <Property Name="CUSTOMER" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="TAX_PAYER_ID" Type="Double" />
+          <Property Name="Truck" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ITEM" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Price_Litre" Type="Double" />
+          <Property Name="Q_ty_Litre_" Type="Double" />
+          <Property Name="Amount" Type="Double" />
+        </EntityType>
+        <EntityType Name="C7invoice_">
+          <Key>
+            <PropertyRef Name="INVOICE_ORDER" />
+          </Key>
+          <Property Name="INVOICE_ORDER" Type="Double" Nullable="false" />
+          <Property Name="COMPANY_NAME" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ADDRESS" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="MAIL" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="TEL" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="INVOICE_NO" Type="Double" />
+          <Property Name="PO_NO" Type="Double" />
+          <Property Name="PAYMENT_NO" Type="Double" />
+          <Property Name="DATE" Type="DateTime" Precision="3" />
+          <Property Name="CUSTOMER_ID" Type="Double" />
+          <Property Name="CUSTOMER" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="TAX_PAYER_ID" Type="Double" />
+          <Property Name="DATE1" Type="DateTime" Precision="3" />
+          <Property Name="FILL_TIME_MIN" Type="Double" />
+          <Property Name="ITEM" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Price" Type="Double" />
+          <Property Name="Qty" Type="Double" />
+          <Property Name="Amount" Type="Double" />
+          <Property Name="val" Type="Double" />
+          <Property Name="GRAND_TOTAL" Type="Double" />
+        </EntityType>
+        <EntityType Name="C_7invoice__">
+          <Key>
+            <PropertyRef Name="INVOICE_ORDER_" />
+          </Key>
+          <Property Name="INVOICE_ORDER_" Type="Double" Nullable="false" />
+          <Property Name="COMPANY_NAME" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ADDRESS" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="MAIL" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="TEL" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="INVOICE_NO" Type="Double" />
+          <Property Name="PO_NO" Type="Double" />
+          <Property Name="PAYMENT_NO" Type="Double" />
+          <Property Name="DATE" Type="DateTime" Precision="3" />
+          <Property Name="CUSTOMER_ID" Type="Double" />
+          <Property Name="CUSTOMER" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="TAX_PAYER_ID" Type="Double" />
+          <Property Name="DATE1" Type="DateTime" Precision="3" />
+          <Property Name="FILL_TIME_MIN" Type="Double" />
+          <Property Name="ITEM" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Price_Litre" Type="Double" />
+          <Property Name="Q_ty_Litre_" Type="Double" />
+          <Property Name="Amount" Type="Double" />
+          <Property Name="val7_" Type="Double" />
+          <Property Name="GRAND_TOTAL" Type="Double" />
+        </EntityType>
+        <EntityType Name="C_BAY_STATION__">
+          <Key>
+            <PropertyRef Name="Bay_ID" />
+          </Key>
+          <Property Name="Bay_ID" Type="Double" Nullable="false" />
+          <Property Name="Gas_ID" Type="Double" />
+          <Property Name="BayName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="CUSTOMER_">
+          <Key>
+            <PropertyRef Name="CustomerID" />
+          </Key>
+          <Property Name="CustomerID" Type="Double" Nullable="false" />
+          <Property Name="Company_Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Firstname_Lastname" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="Double" />
+          <Property Name="Phone" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="GAS_">
+          <Key>
+            <PropertyRef Name="GasID" />
+          </Key>
+          <Property Name="GasID" Type="Double" Nullable="false" />
+          <Property Name="GasName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="GASNEW_">
+          <Key>
+            <PropertyRef Name="GasID" />
+          </Key>
+          <Property Name="GasID" Type="Double" Nullable="false" />
+          <Property Name="GasName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Date" Type="DateTime" Precision="3" />
+          <Property Name="DIESEL_Cost" Type="Double" />
+          <Property Name="DIESEL_Price" Type="Double" />
+          <Property Name="GASOHOL95_Cost" Type="Double" />
+          <Property Name="GASOHOL95_Price" Type="Double" />
+          <Property Name="F8" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="F9" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="F10" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Gen_Journal_">
+          <Key>
+            <PropertyRef Name="JOURNAL_ORDER" />
+          </Key>
+          <Property Name="JOURNAL_ORDER" Type="Double" Nullable="false" />
+          <Property Name="JournalTransactionID" Type="Double" />
+          <Property Name="Date" Type="DateTime" Precision="3" />
+          <Property Name="Time" Type="DateTime" Precision="3" />
+          <Property Name="Account" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Ref" Type="Double" />
+          <Property Name="Debit" Type="Double" />
+          <Property Name="Credit" Type="Double" />
+          <Property Name="F9" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="F10" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="F11" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="date1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Receivable" Type="Double" />
+          <Property Name="COGS" Type="Double" />
+        </EntityType>
+        <EntityType Name="INVOICE_">
+          <Key>
+            <PropertyRef Name="Invoice_ID" />
+          </Key>
+          <Property Name="Invoice_ID" Type="Double" Nullable="false" />
+          <Property Name="PO_ID" Type="Double" />
+          <Property Name="DATE" Type="DateTime" Precision="3" />
+          <Property Name="DEL_NUM" Type="Double" />
+          <Property Name="CustomerID" Type="Double" />
+          <Property Name="Pay_ID__Address_" Type="Double" />
+          <Property Name="Filling_time" Type="Double" />
+          <Property Name="F8" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Amount_Filling_Volume" Type="Double" />
+          <Property Name="Price_per_volume" Type="Double" />
+          <Property Name="F11" Type="Double" />
+          <Property Name="Total_Price__Baht_" Type="Double" />
+          <Property Name="F13" Type="Double" />
+        </EntityType>
+        <EntityType Name="C_JOUNAL_TRANSECTION__">
+          <Key>
+            <PropertyRef Name="Fianance_ID" />
+          </Key>
+          <Property Name="Fianance_ID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DATE" Type="DateTime" Precision="3" />
+          <Property Name="TransName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="TransType" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="TransValue" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="PAYMENT_">
+          <Key>
+            <PropertyRef Name="Pay_ID__Address_" />
+          </Key>
+          <Property Name="Pay_ID__Address_" Type="Double" Nullable="false" />
+          <Property Name="Card_ID" Type="Double" />
+          <Property Name="CustomerID" Type="Double" />
+          <Property Name="Company_Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="PURCHEASE_">
+          <Key>
+            <PropertyRef Name="PO_ID" />
+          </Key>
+          <Property Name="PO_ID" Type="Double" Nullable="false" />
+          <Property Name="SERVICE_ID" Type="Double" />
+          <Property Name="GAS_ID" Type="Double" />
+          <Property Name="BAY_ID" Type="Double" />
+          <Property Name="TRUCK_ID" Type="Double" />
+          <Property Name="DATE" Type="DateTime" Precision="3" />
+          <Property Name="WeightID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="FILL_START_TIME" Type="DateTime" Precision="3" />
+          <Property Name="FILL_END_TIME" Type="DateTime" Precision="3" />
+          <Property Name="TIME_DIF" Type="DateTime" Precision="3" />
+          <Property Name="FILLINGTIME" Type="Double" />
+          <Property Name="Volume___200_" Type="Double" />
+          <Property Name="Status" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="C_SALE_OFFICE__">
+          <Key>
+            <PropertyRef Name="Service_ID" />
+          </Key>
+          <Property Name="Service_ID" Type="Double" Nullable="false" />
+          <Property Name="Finance_ID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Staff_ID" Type="Double" />
+          <Property Name="Queue" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="F5" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="F6" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="F7" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="F8" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="STAFF_">
+          <Key>
+            <PropertyRef Name="Staff_ID" />
+          </Key>
+          <Property Name="Staff_ID" Type="Double" Nullable="false" />
+          <Property Name="Username" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="UserPassword" Type="Double" />
+          <Property Name="Firstname_Lastname" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="BOD" Type="DateTime" Precision="3" />
+          <Property Name="Address" Type="Double" />
+          <Property Name="Phone" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Position" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="F10" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="F11" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="F12" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="F13" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="F14" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="F15" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="F16" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="F17" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="F18" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TRUCK_">
+          <Key>
+            <PropertyRef Name="Truck_ID" />
+          </Key>
+          <Property Name="Truck_ID" Type="Double" Nullable="false" />
+          <Property Name="Customer_ID" Type="Double" />
+          <Property Name="Driver_Firstname_Lastname" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="VEHICLE_NUMBER" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="F5" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="F6" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="F7" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Company_Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="shipping_Address" Type="Double" />
+        </EntityType>
+        <EntityType Name="WEIGHT_">
+          <Key>
+            <PropertyRef Name="WeightID" />
+          </Key>
+          <Property Name="WeightID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="QUEUE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="TIME_In" Type="DateTime" Precision="3" />
+          <Property Name="TIME_Out" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="Capston2Entities8" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="C1Jounal_" EntityType="Self.C1Jounal_" />
+          <EntitySet Name="C2Ledeger_AR__" EntityType="Self.C2Ledeger_AR__" />
+          <EntitySet Name="C2Ledger_AP__" EntityType="Self.C2Ledger_AP__" />
+          <EntitySet Name="C2Ledger_Cash__" EntityType="Self.C2Ledger_Cash__" />
+          <EntitySet Name="C2Ledger_StockDeisel__" EntityType="Self.C2Ledger_StockDeisel__" />
+          <EntitySet Name="C2Ledger_StockGasohol95__" EntityType="Self.C2Ledger_StockGasohol95__" />
+          <EntitySet Name="C3Recon_" EntityType="Self.C3Recon_" />
+          <EntitySet Name="C_3Recon__" EntityType="Self.C_3Recon__" />
+          <EntitySet Name="C4Income_" EntityType="Self.C4Income_" />
+          <EntitySet Name="C_4Income__" EntityType="Self.C_4Income__" />
+          <EntitySet Name="C5Inventory_" EntityType="Self.C5Inventory_" />
+          <EntitySet Name="C_5Inventory__" EntityType="Self.C_5Inventory__" />
+          <EntitySet Name="C6PO_" EntityType="Self.C6PO_" />
+          <EntitySet Name="C_6PO__" EntityType="Self.C_6PO__" />
+          <EntitySet Name="C7invoice_" EntityType="Self.C7invoice_" />
+          <EntitySet Name="C_7invoice__" EntityType="Self.C_7invoice__" />
+          <EntitySet Name="C_BAY_STATION__" EntityType="Self.C_BAY_STATION__" />
+          <EntitySet Name="CUSTOMER_" EntityType="Self.CUSTOMER_" />
+          <EntitySet Name="GAS_" EntityType="Self.GAS_" />
+          <EntitySet Name="GASNEW_" EntityType="Self.GASNEW_" />
+          <EntitySet Name="Gen_Journal_" EntityType="Self.Gen_Journal_" />
+          <EntitySet Name="INVOICE_" EntityType="Self.INVOICE_" />
+          <EntitySet Name="C_JOUNAL_TRANSECTION__" EntityType="Self.C_JOUNAL_TRANSECTION__" />
+          <EntitySet Name="PAYMENT_" EntityType="Self.PAYMENT_" />
+          <EntitySet Name="PURCHEASE_" EntityType="Self.PURCHEASE_" />
+          <EntitySet Name="C_SALE_OFFICE__" EntityType="Self.C_SALE_OFFICE__" />
+          <EntitySet Name="STAFF_" EntityType="Self.STAFF_" />
+          <EntitySet Name="TRUCK_" EntityType="Self.TRUCK_" />
+          <EntitySet Name="WEIGHT_" EntityType="Self.WEIGHT_" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Capston2ModelStoreContainer" CdmEntityContainer="Capston2Entities8">
+          <EntitySetMapping Name="C1Jounal_">
+            <EntityTypeMapping TypeName="Capston2Model.C1Jounal_">
+              <MappingFragment StoreEntitySet="1Jounal$">
+                <ScalarProperty Name="JOURNAL_ORDER" ColumnName="JOURNAL_ORDER" />
+                <ScalarProperty Name="JournalTransactionID" ColumnName="JournalTransactionID" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Time" ColumnName="Time" />
+                <ScalarProperty Name="Account" ColumnName="Account" />
+                <ScalarProperty Name="Ref" ColumnName="Ref" />
+                <ScalarProperty Name="Debit" ColumnName="Debit" />
+                <ScalarProperty Name="Credit" ColumnName="Credit" />
+                <ScalarProperty Name="F9" ColumnName="F9" />
+                <ScalarProperty Name="F10" ColumnName="F10" />
+                <ScalarProperty Name="F11" ColumnName="F11" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="C2Ledeger_AR__">
+            <EntityTypeMapping TypeName="Capston2Model.C2Ledeger_AR__">
+              <MappingFragment StoreEntitySet="2Ledeger(AR)$">
+                <ScalarProperty Name="ACC_RE_ORDER" ColumnName="ACC_RE_ORDER" />
+                <ScalarProperty Name="DATE" ColumnName="DATE" />
+                <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+                <ScalarProperty Name="DEBIT" ColumnName="DEBIT" />
+                <ScalarProperty Name="CREDIT" ColumnName="CREDIT" />
+                <ScalarProperty Name="BALANCE" ColumnName="BALANCE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="C2Ledger_AP__">
+            <EntityTypeMapping TypeName="Capston2Model.C2Ledger_AP__">
+              <MappingFragment StoreEntitySet="2Ledger(AP)$">
+                <ScalarProperty Name="ACC_PAY_ORDER" ColumnName="ACC_PAY_ORDER" />
+                <ScalarProperty Name="DATE" ColumnName="DATE" />
+                <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+                <ScalarProperty Name="DEBIT" ColumnName="DEBIT" />
+                <ScalarProperty Name="CREDIT" ColumnName="CREDIT" />
+                <ScalarProperty Name="BALANCE" ColumnName="BALANCE" />
+                <ScalarProperty Name="F7" ColumnName="F7" />
+                <ScalarProperty Name="F8" ColumnName="F8" />
+                <ScalarProperty Name="F9" ColumnName="F9" />
+                <ScalarProperty Name="F10" ColumnName="F10" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="C2Ledger_Cash__">
+            <EntityTypeMapping TypeName="Capston2Model.C2Ledger_Cash__">
+              <MappingFragment StoreEntitySet="2Ledger(Cash)$">
+                <ScalarProperty Name="CASH_ORDER" ColumnName="CASH_ORDER" />
+                <ScalarProperty Name="DATE" ColumnName="DATE" />
+                <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+                <ScalarProperty Name="DEBIT" ColumnName="DEBIT" />
+                <ScalarProperty Name="CREDIT" ColumnName="CREDIT" />
+                <ScalarProperty Name="BALANCE" ColumnName="BALANCE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="C2Ledger_StockDeisel__">
+            <EntityTypeMapping TypeName="Capston2Model.C2Ledger_StockDeisel__">
+              <MappingFragment StoreEntitySet="2Ledger(StockDeisel)$">
+                <ScalarProperty Name="SD_ORDER" ColumnName="SD_ORDER" />
+                <ScalarProperty Name="DATE" ColumnName="DATE" />
+                <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+                <ScalarProperty Name="DEBIT" ColumnName="DEBIT" />
+                <ScalarProperty Name="CREDIT" ColumnName="CREDIT" />
+                <ScalarProperty Name="BALANCE" ColumnName="BALANCE" />
+                <ScalarProperty Name="F7" ColumnName="F7" />
+                <ScalarProperty Name="F8" ColumnName="F8" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="C2Ledger_StockGasohol95__">
+            <EntityTypeMapping TypeName="Capston2Model.C2Ledger_StockGasohol95__">
+              <MappingFragment StoreEntitySet="2Ledger(StockGasohol95)$">
+                <ScalarProperty Name="SG_ORDER" ColumnName="SG_ORDER" />
+                <ScalarProperty Name="DATE" ColumnName="DATE" />
+                <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+                <ScalarProperty Name="DEBIT" ColumnName="DEBIT" />
+                <ScalarProperty Name="CREDIT" ColumnName="CREDIT" />
+                <ScalarProperty Name="BALANCE" ColumnName="BALANCE" />
+                <ScalarProperty Name="F7" ColumnName="F7" />
+                <ScalarProperty Name="F8" ColumnName="F8" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="C3Recon_">
+            <EntityTypeMapping TypeName="Capston2Model.C3Recon_">
+              <MappingFragment StoreEntitySet="3Recon$">
+                <ScalarProperty Name="RECON_ORDER" ColumnName="RECON_ORDER" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="PO" ColumnName="PO" />
+                <ScalarProperty Name="Payment" ColumnName="Payment" />
+                <ScalarProperty Name="Invoice" ColumnName="Invoice" />
+                <ScalarProperty Name="Shipment" ColumnName="Shipment" />
+                <ScalarProperty Name="Truck" ColumnName="Truck" />
+                <ScalarProperty Name="PetrolType" ColumnName="PetrolType" />
+                <ScalarProperty Name="Qty" ColumnName="Qty" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="Agent" ColumnName="Agent" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="C_3Recon__">
+            <EntityTypeMapping TypeName="Capston2Model.C_3Recon__">
+              <MappingFragment StoreEntitySet="'3Recon$'">
+                <ScalarProperty Name="RECON_ORDER" ColumnName="RECON_ORDER" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="PO_" ColumnName="PO#" />
+                <ScalarProperty Name="Payment_" ColumnName="Payment#" />
+                <ScalarProperty Name="Invoice_" ColumnName="Invoice#" />
+                <ScalarProperty Name="Shipment_" ColumnName="Shipment#" />
+                <ScalarProperty Name="Truck_" ColumnName="Truck#" />
+                <ScalarProperty Name="PetrolType" ColumnName="PetrolType" />
+                <ScalarProperty Name="Q_ty" ColumnName="Q'ty" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="Agent" ColumnName="Agent" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="C4Income_">
+            <EntityTypeMapping TypeName="Capston2Model.C4Income_">
+              <MappingFragment StoreEntitySet="4Income$">
+                <ScalarProperty Name="INCOME_ORDER" ColumnName="INCOME_ORDER" />
+                <ScalarProperty Name="DATE" ColumnName="DATE" />
+                <ScalarProperty Name="Sale_GAS95" ColumnName="Sale_GAS95" />
+                <ScalarProperty Name="Sale_Diesel" ColumnName="Sale_Diesel" />
+                <ScalarProperty Name="Total_Sale" ColumnName="Total_Sale" />
+                <ScalarProperty Name="COGS_GAS95" ColumnName="COGS_GAS95" />
+                <ScalarProperty Name="COGS_Diesel" ColumnName="COGS_Diesel" />
+                <ScalarProperty Name="Total_COGS" ColumnName="Total_COGS" />
+                <ScalarProperty Name="Gross_Profit" ColumnName="Gross_Profit" />
+                <ScalarProperty Name="Officer_Salary" ColumnName="Officer_Salary" />
+                <ScalarProperty Name="GateC_Salary" ColumnName="GateC_Salary" />
+                <ScalarProperty Name="Total_salary" ColumnName="Total_salary" />
+                <ScalarProperty Name="Utility_Expense" ColumnName="Utility Expense" />
+                <ScalarProperty Name="Depreciation" ColumnName="Depreciation" />
+                <ScalarProperty Name="Net_Income_" ColumnName="Net Income " />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="C_4Income__">
+            <EntityTypeMapping TypeName="Capston2Model.C_4Income__">
+              <MappingFragment StoreEntitySet="'4Income$'">
+                <ScalarProperty Name="INCOME_ORDER" ColumnName="INCOME_ORDER" />
+                <ScalarProperty Name="DATE" ColumnName="DATE" />
+                <ScalarProperty Name="Sale_GAS95" ColumnName="Sale_GAS95" />
+                <ScalarProperty Name="Sale_Diesel" ColumnName="Sale_Diesel" />
+                <ScalarProperty Name="Total_Sale" ColumnName="Total_Sale" />
+                <ScalarProperty Name="COGS_GAS95" ColumnName="COGS_GAS95" />
+                <ScalarProperty Name="COGS_Diesel" ColumnName="COGS_Diesel" />
+                <ScalarProperty Name="Total_COGS" ColumnName="Total_COGS" />
+                <ScalarProperty Name="Gross_Profit" ColumnName="Gross_Profit" />
+                <ScalarProperty Name="Officer_Salary" ColumnName="Officer_Salary" />
+                <ScalarProperty Name="GateC_Salary" ColumnName="GateC_Salary" />
+                <ScalarProperty Name="Total_salary" ColumnName="Total_salary" />
+                <ScalarProperty Name="Utility_Expense" ColumnName="Utility Expense" />
+                <ScalarProperty Name="Depreciation" ColumnName="Depreciation" />
+                <ScalarProperty Name="Net_Income_" ColumnName="Net Income " />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="C5Inventory_">
+            <EntityTypeMapping TypeName="Capston2Model.C5Inventory_">
+              <MappingFragment StoreEntitySet="5Inventory$">
+                <ScalarProperty Name="Inventory_ORDER" ColumnName="Inventory_ORDER" />
+                <ScalarProperty Name="Stock" ColumnName="Stock" />
+                <ScalarProperty Name="GASOHOL95" ColumnName="GASOHOL95" />
+                <ScalarProperty Name="DIESEL" ColumnName="DIESEL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="C_5Inventory__">
+            <EntityTypeMapping TypeName="Capston2Model.C_5Inventory__">
+              <MappingFragment StoreEntitySet="'5Inventory$'">
+                <ScalarProperty Name="Inventory_ORDER" ColumnName="Inventory_ORDER" />
+                <ScalarProperty Name="Stock" ColumnName="Stock" />
+                <ScalarProperty Name="GASOHOL95" ColumnName="GASOHOL95" />
+                <ScalarProperty Name="DIESEL" ColumnName="DIESEL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="C6PO_">
+            <EntityTypeMapping TypeName="Capston2Model.C6PO_">
+              <MappingFragment StoreEntitySet="6PO$">
+                <ScalarProperty Name="PO_ORDER" ColumnName="PO_ORDER" />
+                <ScalarProperty Name="PO_NO" ColumnName="PO_NO" />
+                <ScalarProperty Name="PAYMENT_NO" ColumnName="PAYMENT_NO" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="CUSTOMER_ID" ColumnName="CUSTOMER_ID" />
+                <ScalarProperty Name="CUSTOMER" ColumnName="CUSTOMER" />
+                <ScalarProperty Name="TAX_PAYER_ID" ColumnName="TAX_PAYER_ID" />
+                <ScalarProperty Name="Truck" ColumnName="Truck" />
+                <ScalarProperty Name="ITEM" ColumnName="ITEM" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Qty" ColumnName="Qty" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="C_6PO__">
+            <EntityTypeMapping TypeName="Capston2Model.C_6PO__">
+              <MappingFragment StoreEntitySet="'6PO$'">
+                <ScalarProperty Name="PO_ORDER" ColumnName="PO_ORDER" />
+                <ScalarProperty Name="PO_NO" ColumnName="PO_NO" />
+                <ScalarProperty Name="PAYMENT_NO" ColumnName="PAYMENT_NO" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="CUSTOMER_ID" ColumnName="CUSTOMER_ID" />
+                <ScalarProperty Name="CUSTOMER" ColumnName="CUSTOMER" />
+                <ScalarProperty Name="TAX_PAYER_ID" ColumnName="TAX_PAYER_ID" />
+                <ScalarProperty Name="Truck" ColumnName="Truck" />
+                <ScalarProperty Name="ITEM" ColumnName="ITEM" />
+                <ScalarProperty Name="Price_Litre" ColumnName="Price/Litre" />
+                <ScalarProperty Name="Q_ty_Litre_" ColumnName="Q'ty(Litre)" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="C7invoice_">
+            <EntityTypeMapping TypeName="Capston2Model.C7invoice_">
+              <MappingFragment StoreEntitySet="7invoice$">
+                <ScalarProperty Name="INVOICE_ORDER" ColumnName="INVOICE_ORDER" />
+                <ScalarProperty Name="COMPANY_NAME" ColumnName="COMPANY_NAME" />
+                <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+                <ScalarProperty Name="MAIL" ColumnName="MAIL" />
+                <ScalarProperty Name="TEL" ColumnName="TEL" />
+                <ScalarProperty Name="INVOICE_NO" ColumnName="INVOICE_NO" />
+                <ScalarProperty Name="PO_NO" ColumnName="PO_NO" />
+                <ScalarProperty Name="PAYMENT_NO" ColumnName="PAYMENT_NO" />
+                <ScalarProperty Name="DATE" ColumnName="DATE" />
+                <ScalarProperty Name="CUSTOMER_ID" ColumnName="CUSTOMER_ID" />
+                <ScalarProperty Name="CUSTOMER" ColumnName="CUSTOMER" />
+                <ScalarProperty Name="TAX_PAYER_ID" ColumnName="TAX_PAYER_ID" />
+                <ScalarProperty Name="DATE1" ColumnName="DATE1" />
+                <ScalarProperty Name="FILL_TIME_MIN" ColumnName="FILL_TIME_MIN" />
+                <ScalarProperty Name="ITEM" ColumnName="ITEM" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Qty" ColumnName="Qty" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="val" ColumnName="val" />
+                <ScalarProperty Name="GRAND_TOTAL" ColumnName="GRAND_TOTAL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="C_7invoice__">
+            <EntityTypeMapping TypeName="Capston2Model.C_7invoice__">
+              <MappingFragment StoreEntitySet="'7invoice$'">
+                <ScalarProperty Name="INVOICE_ORDER_" ColumnName="INVOICE_ORDER " />
+                <ScalarProperty Name="COMPANY_NAME" ColumnName="COMPANY_NAME" />
+                <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+                <ScalarProperty Name="MAIL" ColumnName="MAIL" />
+                <ScalarProperty Name="TEL" ColumnName="TEL" />
+                <ScalarProperty Name="INVOICE_NO" ColumnName="INVOICE_NO" />
+                <ScalarProperty Name="PO_NO" ColumnName="PO_NO" />
+                <ScalarProperty Name="PAYMENT_NO" ColumnName="PAYMENT_NO" />
+                <ScalarProperty Name="DATE" ColumnName="DATE" />
+                <ScalarProperty Name="CUSTOMER_ID" ColumnName="CUSTOMER_ID" />
+                <ScalarProperty Name="CUSTOMER" ColumnName="CUSTOMER" />
+                <ScalarProperty Name="TAX_PAYER_ID" ColumnName="TAX_PAYER_ID" />
+                <ScalarProperty Name="DATE1" ColumnName="DATE1" />
+                <ScalarProperty Name="FILL_TIME_MIN" ColumnName="FILL_TIME_MIN" />
+                <ScalarProperty Name="ITEM" ColumnName="ITEM" />
+                <ScalarProperty Name="Price_Litre" ColumnName="Price/Litre" />
+                <ScalarProperty Name="Q_ty_Litre_" ColumnName="Q'ty(Litre)" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="val7_" ColumnName="val7%" />
+                <ScalarProperty Name="GRAND_TOTAL" ColumnName="GRAND_TOTAL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="C_BAY_STATION__">
+            <EntityTypeMapping TypeName="Capston2Model.C_BAY_STATION__">
+              <MappingFragment StoreEntitySet="'BAY STATION$'">
+                <ScalarProperty Name="Bay_ID" ColumnName="Bay_ID" />
+                <ScalarProperty Name="Gas_ID" ColumnName="Gas_ID" />
+                <ScalarProperty Name="BayName" ColumnName="BayName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CUSTOMER_">
+            <EntityTypeMapping TypeName="Capston2Model.CUSTOMER_">
+              <MappingFragment StoreEntitySet="CUSTOMER$">
+                <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+                <ScalarProperty Name="Company_Name" ColumnName="Company Name" />
+                <ScalarProperty Name="Firstname_Lastname" ColumnName="Firstname_Lastname" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GAS_">
+            <EntityTypeMapping TypeName="Capston2Model.GAS_">
+              <MappingFragment StoreEntitySet="GAS$">
+                <ScalarProperty Name="GasID" ColumnName="GasID" />
+                <ScalarProperty Name="GasName" ColumnName="GasName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GASNEW_">
+            <EntityTypeMapping TypeName="Capston2Model.GASNEW_">
+              <MappingFragment StoreEntitySet="GASNEW$">
+                <ScalarProperty Name="GasID" ColumnName="GasID" />
+                <ScalarProperty Name="GasName" ColumnName="GasName" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="DIESEL_Cost" ColumnName="DIESEL Cost" />
+                <ScalarProperty Name="DIESEL_Price" ColumnName="DIESEL Price" />
+                <ScalarProperty Name="GASOHOL95_Cost" ColumnName="GASOHOL95 Cost" />
+                <ScalarProperty Name="GASOHOL95_Price" ColumnName="GASOHOL95 Price" />
+                <ScalarProperty Name="F8" ColumnName="F8" />
+                <ScalarProperty Name="F9" ColumnName="F9" />
+                <ScalarProperty Name="F10" ColumnName="F10" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Gen_Journal_">
+            <EntityTypeMapping TypeName="Capston2Model.Gen_Journal_">
+              <MappingFragment StoreEntitySet="Gen_Journal$">
+                <ScalarProperty Name="JOURNAL_ORDER" ColumnName="JOURNAL_ORDER" />
+                <ScalarProperty Name="JournalTransactionID" ColumnName="JournalTransactionID" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Time" ColumnName="Time" />
+                <ScalarProperty Name="Account" ColumnName="Account" />
+                <ScalarProperty Name="Ref" ColumnName="Ref" />
+                <ScalarProperty Name="Debit" ColumnName="Debit" />
+                <ScalarProperty Name="Credit" ColumnName="Credit" />
+                <ScalarProperty Name="F9" ColumnName="F9" />
+                <ScalarProperty Name="F10" ColumnName="F10" />
+                <ScalarProperty Name="F11" ColumnName="F11" />
+                <ScalarProperty Name="date1" ColumnName="date1" />
+                <ScalarProperty Name="Receivable" ColumnName="Receivable" />
+                <ScalarProperty Name="COGS" ColumnName="COGS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="INVOICE_">
+            <EntityTypeMapping TypeName="Capston2Model.INVOICE_">
+              <MappingFragment StoreEntitySet="INVOICE$">
+                <ScalarProperty Name="Invoice_ID" ColumnName="Invoice_ID" />
+                <ScalarProperty Name="PO_ID" ColumnName="PO_ID" />
+                <ScalarProperty Name="DATE" ColumnName="DATE" />
+                <ScalarProperty Name="DEL_NUM" ColumnName="DEL_NUM" />
+                <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+                <ScalarProperty Name="Pay_ID__Address_" ColumnName="Pay_ID (Address)" />
+                <ScalarProperty Name="Filling_time" ColumnName="Filling time" />
+                <ScalarProperty Name="F8" ColumnName="F8" />
+                <ScalarProperty Name="Amount_Filling_Volume" ColumnName="Amount Filling Volume" />
+                <ScalarProperty Name="Price_per_volume" ColumnName="Price per volume" />
+                <ScalarProperty Name="F11" ColumnName="F11" />
+                <ScalarProperty Name="Total_Price__Baht_" ColumnName="Total Price (Baht)" />
+                <ScalarProperty Name="F13" ColumnName="F13" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="C_JOUNAL_TRANSECTION__">
+            <EntityTypeMapping TypeName="Capston2Model.C_JOUNAL_TRANSECTION__">
+              <MappingFragment StoreEntitySet="'JOUNAL TRANSECTION$'">
+                <ScalarProperty Name="Fianance_ID" ColumnName="Fianance_ID" />
+                <ScalarProperty Name="DATE" ColumnName="DATE" />
+                <ScalarProperty Name="TransName" ColumnName="TransName" />
+                <ScalarProperty Name="TransType" ColumnName="TransType" />
+                <ScalarProperty Name="TransValue" ColumnName="TransValue" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PAYMENT_">
+            <EntityTypeMapping TypeName="Capston2Model.PAYMENT_">
+              <MappingFragment StoreEntitySet="PAYMENT$">
+                <ScalarProperty Name="Pay_ID__Address_" ColumnName="Pay_ID (Address)" />
+                <ScalarProperty Name="Card_ID" ColumnName="Card_ID" />
+                <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+                <ScalarProperty Name="Company_Name" ColumnName="Company Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PURCHEASE_">
+            <EntityTypeMapping TypeName="Capston2Model.PURCHEASE_">
+              <MappingFragment StoreEntitySet="PURCHEASE$">
+                <ScalarProperty Name="PO_ID" ColumnName="PO_ID" />
+                <ScalarProperty Name="SERVICE_ID" ColumnName="SERVICE_ID" />
+                <ScalarProperty Name="GAS_ID" ColumnName="GAS_ID" />
+                <ScalarProperty Name="BAY_ID" ColumnName="BAY_ID" />
+                <ScalarProperty Name="TRUCK_ID" ColumnName="TRUCK_ID" />
+                <ScalarProperty Name="DATE" ColumnName="DATE" />
+                <ScalarProperty Name="WeightID" ColumnName="WeightID" />
+                <ScalarProperty Name="FILL_START_TIME" ColumnName="FILL_START_TIME" />
+                <ScalarProperty Name="FILL_END_TIME" ColumnName="FILL_END_TIME" />
+                <ScalarProperty Name="TIME_DIF" ColumnName="TIME_DIF" />
+                <ScalarProperty Name="FILLINGTIME" ColumnName="FILLINGTIME" />
+                <ScalarProperty Name="Volume___200_" ColumnName="Volume (*200)" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="C_SALE_OFFICE__">
+            <EntityTypeMapping TypeName="Capston2Model.C_SALE_OFFICE__">
+              <MappingFragment StoreEntitySet="'SALE OFFICE$'">
+                <ScalarProperty Name="Service_ID" ColumnName="Service_ID" />
+                <ScalarProperty Name="Finance_ID" ColumnName="Finance_ID" />
+                <ScalarProperty Name="Staff_ID" ColumnName="Staff_ID" />
+                <ScalarProperty Name="Queue" ColumnName="Queue" />
+                <ScalarProperty Name="F5" ColumnName="F5" />
+                <ScalarProperty Name="F6" ColumnName="F6" />
+                <ScalarProperty Name="F7" ColumnName="F7" />
+                <ScalarProperty Name="F8" ColumnName="F8" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="STAFF_">
+            <EntityTypeMapping TypeName="Capston2Model.STAFF_">
+              <MappingFragment StoreEntitySet="STAFF$">
+                <ScalarProperty Name="Staff_ID" ColumnName="Staff_ID" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
+                <ScalarProperty Name="Firstname_Lastname" ColumnName="Firstname_Lastname" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="BOD" ColumnName="BOD" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Position" ColumnName="Position" />
+                <ScalarProperty Name="F10" ColumnName="F10" />
+                <ScalarProperty Name="F11" ColumnName="F11" />
+                <ScalarProperty Name="F12" ColumnName="F12" />
+                <ScalarProperty Name="F13" ColumnName="F13" />
+                <ScalarProperty Name="F14" ColumnName="F14" />
+                <ScalarProperty Name="F15" ColumnName="F15" />
+                <ScalarProperty Name="F16" ColumnName="F16" />
+                <ScalarProperty Name="F17" ColumnName="F17" />
+                <ScalarProperty Name="F18" ColumnName="F18" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TRUCK_">
+            <EntityTypeMapping TypeName="Capston2Model.TRUCK_">
+              <MappingFragment StoreEntitySet="TRUCK$">
+                <ScalarProperty Name="Truck_ID" ColumnName="Truck_ID" />
+                <ScalarProperty Name="Customer_ID" ColumnName="Customer_ID" />
+                <ScalarProperty Name="Driver_Firstname_Lastname" ColumnName="Driver_Firstname_Lastname" />
+                <ScalarProperty Name="VEHICLE_NUMBER" ColumnName="VEHICLE_NUMBER" />
+                <ScalarProperty Name="F5" ColumnName="F5" />
+                <ScalarProperty Name="F6" ColumnName="F6" />
+                <ScalarProperty Name="F7" ColumnName="F7" />
+                <ScalarProperty Name="Company_Name" ColumnName="Company Name" />
+                <ScalarProperty Name="shipping_Address" ColumnName="shipping Address" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WEIGHT_">
+            <EntityTypeMapping TypeName="Capston2Model.WEIGHT_">
+              <MappingFragment StoreEntitySet="WEIGHT$">
+                <ScalarProperty Name="WeightID" ColumnName="WeightID" />
+                <ScalarProperty Name="QUEUE" ColumnName="QUEUE" />
+                <ScalarProperty Name="TIME_In" ColumnName="TIME In" />
+                <ScalarProperty Name="TIME_Out" ColumnName="TIME Out" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

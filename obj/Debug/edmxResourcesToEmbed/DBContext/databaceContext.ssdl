@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Capstone2Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="BayStation">
+    <Key>
+      <PropertyRef Name="BayID" />
+    </Key>
+    <Property Name="BayID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GasID" Type="int" Nullable="false" />
+    <Property Name="BayName" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Cutomer">
+    <Key>
+      <PropertyRef Name="CustomerID" />
+    </Key>
+    <Property Name="CustomerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Firstname" Type="nchar" MaxLength="20" />
+    <Property Name="Lastname" Type="nchar" MaxLength="20" />
+    <Property Name="Gender" Type="nchar" MaxLength="10" />
+    <Property Name="Email" Type="nchar" MaxLength="20" />
+    <Property Name="Address" Type="nchar" MaxLength="30" />
+    <Property Name="Phone" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Gas">
+    <Key>
+      <PropertyRef Name="GasID" />
+    </Key>
+    <Property Name="GasID" Type="int" Nullable="false" />
+    <Property Name="GasName" Type="nchar" MaxLength="10" />
+    <Property Name="Price" Type="int" />
+  </EntityType>
+  <EntityType Name="Invoice">
+    <Key>
+      <PropertyRef Name="POID" />
+    </Key>
+    <Property Name="POID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustomerID" Type="int" />
+    <Property Name="PayID" Type="int" />
+    <Property Name="TotalCost" Type="int" />
+  </EntityType>
+  <EntityType Name="JournalTransaction">
+    <Key>
+      <PropertyRef Name="FinanceID" />
+    </Key>
+    <Property Name="FinanceID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="TransName" Type="nchar" MaxLength="20" />
+    <Property Name="TransType" Type="nchar" MaxLength="20" />
+    <Property Name="TransValue" Type="int" />
+  </EntityType>
+  <EntityType Name="Payment">
+    <Key>
+      <PropertyRef Name="PayID" />
+    </Key>
+    <Property Name="PayID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CardID" Type="int" />
+    <Property Name="Firstname" Type="nchar" MaxLength="20" />
+    <Property Name="Lastname" Type="nchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Purchase">
+    <Key>
+      <PropertyRef Name="POID" />
+    </Key>
+    <Property Name="POID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ServiceID" Type="int" />
+    <Property Name="GasID" Type="int" Nullable="false" />
+    <Property Name="BayID" Type="int" Nullable="false" />
+    <Property Name="TruckID" Type="int" Nullable="false" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="WeightID" Type="int" />
+    <Property Name="TimeIn" Type="datetime" />
+    <Property Name="TimeOut" Type="timestamp" StoreGeneratedPattern="Computed" />
+    <Property Name="Amount" Type="int" />
+    <Property Name="WaitingTime" Type="datetime" />
+    <Property Name="TimeInterval" Type="datetime" />
+    <Property Name="Status" Type="nchar" MaxLength="5" />
+  </EntityType>
+  <EntityType Name="SaleOffice">
+    <Key>
+      <PropertyRef Name="ServiceID" />
+    </Key>
+    <Property Name="ServiceID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FinanceID" Type="int" />
+    <Property Name="StaffID" Type="int" />
+    <Property Name="Queue" Type="int" />
+  </EntityType>
+  <EntityType Name="Staff">
+    <Key>
+      <PropertyRef Name="StaffID" />
+    </Key>
+    <Property Name="StaffID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="nchar" MaxLength="20" Nullable="false" />
+    <Property Name="Password" Type="nchar" MaxLength="20" Nullable="false" />
+    <Property Name="Firstname" Type="nchar" MaxLength="20" />
+    <Property Name="Lastname" Type="nchar" MaxLength="20" />
+    <Property Name="Gender" Type="nchar" MaxLength="10" />
+    <Property Name="Email" Type="nchar" MaxLength="30" />
+    <Property Name="BOD" Type="datetime" />
+    <Property Name="Address" Type="nchar" MaxLength="50" />
+    <Property Name="Phone" Type="int" />
+    <Property Name="Position" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Truck">
+    <Key>
+      <PropertyRef Name="TruckID" />
+    </Key>
+    <Property Name="TruckID" Type="int" Nullable="false" />
+    <Property Name="CustomerID" Type="int" />
+    <Property Name="Driver_Firstname" Type="nchar" MaxLength="20" />
+    <Property Name="Driver_Lastname" Type="nchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Weight">
+    <Key>
+      <PropertyRef Name="WeightID" />
+    </Key>
+    <Property Name="WeightID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Queue" Type="int" />
+    <Property Name="TimeIn" Type="datetime" />
+    <Property Name="WeightIn" Type="int" />
+    <Property Name="WeightOut" Type="int" />
+    <Property Name="TimeOut" Type="datetime" />
+  </EntityType>
+  <Association Name="FK_BayStation_Gas">
+    <End Role="Gas" Type="Self.Gas" Multiplicity="1" />
+    <End Role="BayStation" Type="Self.BayStation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Gas">
+        <PropertyRef Name="GasID" />
+      </Principal>
+      <Dependent Role="BayStation">
+        <PropertyRef Name="GasID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Invoice_Cutomer">
+    <End Role="Cutomer" Type="Self.Cutomer" Multiplicity="0..1" />
+    <End Role="Invoice" Type="Self.Invoice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cutomer">
+        <PropertyRef Name="CustomerID" />
+      </Principal>
+      <Dependent Role="Invoice">
+        <PropertyRef Name="CustomerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Invoice_Payment">
+    <End Role="Payment" Type="Self.Payment" Multiplicity="0..1" />
+    <End Role="Invoice" Type="Self.Invoice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Payment">
+        <PropertyRef Name="PayID" />
+      </Principal>
+      <Dependent Role="Invoice">
+        <PropertyRef Name="PayID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Invoice_Purchase">
+    <End Role="Purchase" Type="Self.Purchase" Multiplicity="1" />
+    <End Role="Invoice" Type="Self.Invoice" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Purchase">
+        <PropertyRef Name="POID" />
+      </Principal>
+      <Dependent Role="Invoice">
+        <PropertyRef Name="POID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Purchase_BayStation1">
+    <End Role="BayStation" Type="Self.BayStation" Multiplicity="1" />
+    <End Role="Purchase" Type="Self.Purchase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BayStation">
+        <PropertyRef Name="BayID" />
+      </Principal>
+      <Dependent Role="Purchase">
+        <PropertyRef Name="BayID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Purchase_Gas">
+    <End Role="Gas" Type="Self.Gas" Multiplicity="1" />
+    <End Role="Purchase" Type="Self.Purchase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Gas">
+        <PropertyRef Name="GasID" />
+      </Principal>
+      <Dependent Role="Purchase">
+        <PropertyRef Name="GasID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Purchase_SaleOffice">
+    <End Role="SaleOffice" Type="Self.SaleOffice" Multiplicity="0..1" />
+    <End Role="Purchase" Type="Self.Purchase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SaleOffice">
+        <PropertyRef Name="ServiceID" />
+      </Principal>
+      <Dependent Role="Purchase">
+        <PropertyRef Name="ServiceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Purchase_Truck">
+    <End Role="Truck" Type="Self.Truck" Multiplicity="1" />
+    <End Role="Purchase" Type="Self.Purchase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Truck">
+        <PropertyRef Name="TruckID" />
+      </Principal>
+      <Dependent Role="Purchase">
+        <PropertyRef Name="TruckID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Purchase_Weight">
+    <End Role="Weight" Type="Self.Weight" Multiplicity="1" />
+    <End Role="Purchase" Type="Self.Purchase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Weight">
+        <PropertyRef Name="WeightID" />
+      </Principal>
+      <Dependent Role="Purchase">
+        <PropertyRef Name="TruckID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SaleOffice_JournalTransaction">
+    <End Role="JournalTransaction" Type="Self.JournalTransaction" Multiplicity="0..1" />
+    <End Role="SaleOffice" Type="Self.SaleOffice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="JournalTransaction">
+        <PropertyRef Name="FinanceID" />
+      </Principal>
+      <Dependent Role="SaleOffice">
+        <PropertyRef Name="FinanceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SaleOffice_Staff">
+    <End Role="Staff" Type="Self.Staff" Multiplicity="0..1" />
+    <End Role="SaleOffice" Type="Self.SaleOffice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Staff">
+        <PropertyRef Name="StaffID" />
+      </Principal>
+      <Dependent Role="SaleOffice">
+        <PropertyRef Name="StaffID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Truck_Cutomer">
+    <End Role="Cutomer" Type="Self.Cutomer" Multiplicity="0..1" />
+    <End Role="Truck" Type="Self.Truck" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cutomer">
+        <PropertyRef Name="CustomerID" />
+      </Principal>
+      <Dependent Role="Truck">
+        <PropertyRef Name="CustomerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Capstone2ModelStoreContainer">
+    <EntitySet Name="BayStation" EntityType="Self.BayStation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Cutomer" EntityType="Self.Cutomer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Gas" EntityType="Self.Gas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Invoice" EntityType="Self.Invoice" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="JournalTransaction" EntityType="Self.JournalTransaction" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Payment" EntityType="Self.Payment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Purchase" EntityType="Self.Purchase" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SaleOffice" EntityType="Self.SaleOffice" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Staff" EntityType="Self.Staff" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Truck" EntityType="Self.Truck" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Weight" EntityType="Self.Weight" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_BayStation_Gas" Association="Self.FK_BayStation_Gas">
+      <End Role="Gas" EntitySet="Gas" />
+      <End Role="BayStation" EntitySet="BayStation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Invoice_Cutomer" Association="Self.FK_Invoice_Cutomer">
+      <End Role="Cutomer" EntitySet="Cutomer" />
+      <End Role="Invoice" EntitySet="Invoice" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Invoice_Payment" Association="Self.FK_Invoice_Payment">
+      <End Role="Payment" EntitySet="Payment" />
+      <End Role="Invoice" EntitySet="Invoice" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Invoice_Purchase" Association="Self.FK_Invoice_Purchase">
+      <End Role="Purchase" EntitySet="Purchase" />
+      <End Role="Invoice" EntitySet="Invoice" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Purchase_BayStation1" Association="Self.FK_Purchase_BayStation1">
+      <End Role="BayStation" EntitySet="BayStation" />
+      <End Role="Purchase" EntitySet="Purchase" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Purchase_Gas" Association="Self.FK_Purchase_Gas">
+      <End Role="Gas" EntitySet="Gas" />
+      <End Role="Purchase" EntitySet="Purchase" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Purchase_SaleOffice" Association="Self.FK_Purchase_SaleOffice">
+      <End Role="SaleOffice" EntitySet="SaleOffice" />
+      <End Role="Purchase" EntitySet="Purchase" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Purchase_Truck" Association="Self.FK_Purchase_Truck">
+      <End Role="Truck" EntitySet="Truck" />
+      <End Role="Purchase" EntitySet="Purchase" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Purchase_Weight" Association="Self.FK_Purchase_Weight">
+      <End Role="Weight" EntitySet="Weight" />
+      <End Role="Purchase" EntitySet="Purchase" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SaleOffice_JournalTransaction" Association="Self.FK_SaleOffice_JournalTransaction">
+      <End Role="JournalTransaction" EntitySet="JournalTransaction" />
+      <End Role="SaleOffice" EntitySet="SaleOffice" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SaleOffice_Staff" Association="Self.FK_SaleOffice_Staff">
+      <End Role="Staff" EntitySet="Staff" />
+      <End Role="SaleOffice" EntitySet="SaleOffice" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Truck_Cutomer" Association="Self.FK_Truck_Cutomer">
+      <End Role="Cutomer" EntitySet="Cutomer" />
+      <End Role="Truck" EntitySet="Truck" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
